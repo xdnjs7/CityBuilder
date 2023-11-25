@@ -11,6 +11,8 @@
     <None Include="..\..\Source\frameworkEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.gitattributes" />
+    <None Include="..\..\.vsconfig" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -42,6 +44,12 @@
       <Filter>Source\framework</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\framework\frameworkGameModeBase.h">
+      <Filter>Source\framework</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\framework\MovingCamera.cpp">
+      <Filter>Source\framework</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\framework\MovingCamera.h">
       <Filter>Source\framework</Filter>
     </ClInclude>
   </ItemGroup>
