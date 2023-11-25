@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"E:\\github\\CityBuilder\\framework\\Source\\framework\\framework.Build.cs",
+		"E:\\github\\CityBuilder\\framework\\Source\\framework.Target.cs",
+		"E:\\github\\CityBuilder\\framework\\Source\\frameworkEditor.Target.cs"
+	],
+	"EngineVersion": "5.2.1"
+}
