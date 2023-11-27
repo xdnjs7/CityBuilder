@@ -1,12 +1,12 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "e:\\github\\citybuilder\\framework\\source\\framework\\framework.cpp",
+        "Source": "c:\\users\\woong\\desktop\\citybuilder\\framework\\source\\framework\\framework.cpp",
         "ProvidedModule": "",
-        "PCH": "e:\\github\\citybuilder\\framework\\intermediate\\build\\win64\\x64\\frameworkeditor\\development\\engine\\sharedpch.engine.shadowerrors.inclorderunreal5_1.h.pch",
+        "PCH": "c:\\users\\woong\\desktop\\citybuilder\\framework\\intermediate\\build\\win64\\x64\\frameworkeditor\\development\\engine\\sharedpch.engine.shadowerrors.inclorderunreal5_1.h.pch",
         "Includes": [
-            "e:\\github\\citybuilder\\framework\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\framework\\definitions.framework.h",
-            "e:\\github\\citybuilder\\framework\\source\\framework\\framework.h"
+            "c:\\users\\woong\\desktop\\citybuilder\\framework\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\framework\\definitions.framework.h",
+            "c:\\users\\woong\\desktop\\citybuilder\\framework\\source\\framework\\framework.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
