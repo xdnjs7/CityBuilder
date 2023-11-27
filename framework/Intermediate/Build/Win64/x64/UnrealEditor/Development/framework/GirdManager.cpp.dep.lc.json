@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "e:\\github\\citybuilder\\framework\\source\\framework\\private\\girdmanager.cpp",
+        "ProvidedModule": "",
+        "PCH": "e:\\github\\citybuilder\\framework\\intermediate\\build\\win64\\x64\\frameworkeditor\\development\\engine\\sharedpch.engine.shadowerrors.inclorderunreal5_1.h.pch",
+        "Includes": [
+            "e:\\github\\citybuilder\\framework\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\framework\\definitions.framework.h",
+            "e:\\github\\citybuilder\\framework\\source\\framework\\public\\girdmanager.h",
+            "e:\\github\\citybuilder\\framework\\intermediate\\build\\win64\\unrealeditor\\inc\\framework\\uht\\girdmanager.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

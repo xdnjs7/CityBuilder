@@ -1,0 +1,6 @@
+﻿  Using bundled DotNet SDK version: 6.0.302
+  Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" frameworkEditor Win64 Development -Project="E:\github\CityBuilder\framework\framework.uproject" -WaitMutex -FromMsBuild
+  Log file: C:\Users\xdnjs\AppData\Local\UnrealBuildTool\Log.txt
+  Using 'git status' to determine working set for adaptive non-unity build (E:\github\CityBuilder).
+  Unable to build while Live Coding is active. Exit the editor and game, or press Ctrl+Alt+F11 if iterating on code in the editor or game
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.MakeFile.Targets(44,5): error MSB3073: ""C:\Program Files\Epic Games\UE_5.2\Engine\Build\BatchFiles\Build.bat" frameworkEditor Win64 Development -Project="E:\github\CityBuilder\framework\framework.uproject" -WaitMutex -FromMsBuild" 명령이 종료되었습니다(코드: 6).
