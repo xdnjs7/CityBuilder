@@ -3,7 +3,9 @@
 
 #include "MovingCamera.h"
 #include "Camera/CameraComponent.h"
+#include "GameFramework/SpringArmComponent.h"
 #include "Components/CapsuleComponent.h"
+#include "Kismet/KismetMathLibrary.h"
 
 // Sets default values
 AMovingCamera::AMovingCamera()
@@ -11,11 +13,26 @@ AMovingCamera::AMovingCamera()
     // Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
     PrimaryActorTick.bCanEverTick = true;
 
-    MCCapsule = CreateDefaultSubobject<UCapsuleComponent>(TEXT("MCCapsule"));
-    MCCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("MCCamera"));
+    // 컴포넌트 Init
+    MCSpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("MCSpringArm"));
+    MCSpringArm->SetupAttachment(GetRootComponent());
+    MCSpringArm->TargetArmLength = 500.0f;
+    MCSpringArm->bUsePawnControlRotation = true;
 
-    // 클래스 컴포넌트를 디폴트 캐릭터의 스켈레탈 메시 컴포넌트에 어태치
-    MCCamera->SetupAttachment(GetMesh());
+    MCCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("MCCamera"));
+    MCCamera->SetupAttachment(MCSpringArm);
+    MCCamera->bUsePawnControlRotation = false;
+
+    MCCapsule = CreateDefaultSubobject<UCapsuleComponent>(TEXT("MCCapsule"));
+
+    //// 클래스 컴포넌트를 디폴트 캐릭터의 스켈레탈 메시 컴포넌트에 어태치
+    //MCCamera->SetupAttachment(GetMesh());
+
+    // 카메라 세팅
+    bUseControllerRotationPitch = false;
+    bUseControllerRotationRoll = false;
+    bUseControllerRotationYaw = false;
+    
 }
 
 // Called when the game starts or when spawned
@@ -50,13 +67,19 @@ void AMovingCamera::SetupPlayerInputComponent(UInputComponent* PlayerInputCompon
 
 void AMovingCamera::MoveForward(float Value)
 {
-    FVector Direction = FRotationMatrix(Controller->GetControlRotation()).GetScaledAxis(EAxis::X);
+    //FVector Direction = FRotationMatrix(Controller->GetControlRotation()).GetScaledAxis(EAxis::X);
+    //AddMovementInput(Direction, Value);
+
+    FVector Direction = UKismetMathLibrary::GetForwardVector(FRotator(0.0f, GetControlRotation().Yaw, 0.0f));
     AddMovementInput(Direction, Value);
 }
 
 void AMovingCamera::MoveRight(float Value)
 {
-    FVector Direction = FRotationMatrix(Controller->GetControlRotation()).GetScaledAxis(EAxis::Y);
+    //FVector Direction = FRotationMatrix(Controller->GetControlRotation()).GetScaledAxis(EAxis::Y);
+    //AddMovementInput(Direction, Value);
+
+    FVector Direction = UKismetMathLibrary::GetRightVector(FRotator(0.0f, GetControlRotation().Yaw, 0.0f));
     AddMovementInput(Direction, Value);
 }
 
@@ -64,15 +87,17 @@ void AMovingCamera::Rotate(float Value)
 {
     UE_LOG(LogTemp, Warning, TEXT("RotateRight Called"));
 
-    // 입력값에 따라 회전
-    FRotator NewRotation = MCCamera->GetComponentRotation();
-    NewRotation.Yaw += Value * CameraRotationSpeed;
+    //// 입력값에 따라 회전
+    //FRotator NewRotation = MCCamera->GetComponentRotation();
+    //NewRotation.Yaw += Value * CameraRotationSpeed;
 
-    // 보간 속도를 따로 지정하여 사용
-    float InterpSpeed = 10.0f;
-    FRotator LerpedRotation = FMath::RInterpTo(MCCamera->GetComponentRotation(), NewRotation, GetWorld()->GetDeltaSeconds(), InterpSpeed);
+    //// 보간 속도를 따로 지정하여 사용
+    //float InterpSpeed = 10.0f;
+    //FRotator LerpedRotation = FMath::RInterpTo(MCCamera->GetComponentRotation(), NewRotation, GetWorld()->GetDeltaSeconds(), InterpSpeed);
 
-    MCCamera->SetWorldRotation(LerpedRotation);
+    //MCCamera->SetWorldRotation(LerpedRotation);
+
+    AddControllerYawInput(Value);
 }
 
 void AMovingCamera::MouseWheelZoom(float Value)

@@ -24,6 +24,9 @@ protected:
 
 	UPROPERTY(VisibleAnyWhere, BlueprintReadOnly, Category = Camera)
 	class UCameraComponent* MCCamera;
+	
+	UPROPERTY(VisibleAnyWhere, BlueprintReadOnly, Category = Camera)
+	class USpringArmComponent* MCSpringArm;
 
 	UPROPERTY(EditAnyWhere, BlueprintReadWrite, Category = Camera)
 	float CameraRotationSpeed = 45.0f;
@@ -46,8 +49,13 @@ public:
 
 	virtual void MouseWheelZoom(float Value);
 
+	UFUNCTION()
 	void MoveForward(float Value);
+
+	UFUNCTION()
 	void MoveRight(float Value);
+
+	UFUNCTION()
 	void Rotate(float Value);
 
 };
