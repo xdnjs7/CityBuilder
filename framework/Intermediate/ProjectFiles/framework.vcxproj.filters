@@ -43,6 +43,18 @@
     <Filter Include="Source\framework">
       <UniqueIdentifier>{2F6C4CED-AD76-3133-A8BE-A2C0E50F1918}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\framework\CB_Clickable.cpp">
+      <Filter>Source\framework</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\framework\CB_Clickable.h">
+      <Filter>Source\framework</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\framework\CB_PlayerController.cpp">
+      <Filter>Source\framework</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\framework\CB_PlayerController.h">
+      <Filter>Source\framework</Filter>
+    </ClInclude>
     <None Include="..\..\Source\framework\framework.Build.cs">
       <Filter>Source\framework</Filter>
     </None>
