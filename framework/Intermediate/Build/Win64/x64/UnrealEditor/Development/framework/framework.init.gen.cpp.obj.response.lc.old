@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 E:\github\CityBuilder\framework\Intermediate\Build\Win64\UnrealEditor\Inc\framework\UHT\framework.init.gen.cpp
+=======
+C:\Users\user\Documents\GitHub\CityBuilder\framework\Intermediate\Build\Win64\UnrealEditor\Inc\framework\UHT\framework.init.gen.cpp
+>>>>>>> feature/camera
 /I .
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\UHT
 /I ..\Shaders\Shared
@@ -272,12 +276,18 @@ E:\github\CityBuilder\framework\Intermediate\Build\Win64\UnrealEditor\Inc\framew
 /I Runtime\MovieSceneCapture\Public
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\AnimationDataController\UHT
 /I Developer\AnimationDataController\Public
+<<<<<<< HEAD
 /I E:\github\CityBuilder\framework\Intermediate\Build\Win64\UnrealEditor\Inc\framework\UHT
 /I E:\github\CityBuilder\framework\Source
+=======
+/I C:\Users\user\Documents\GitHub\CityBuilder\framework\Intermediate\Build\Win64\UnrealEditor\Inc\framework\UHT
+/I C:\Users\user\Documents\GitHub\CityBuilder\framework\Source
+>>>>>>> feature/camera
 /external:W0
 /external:I ThirdParty\mimalloc\include
 /external:I ThirdParty\LibTiff\Source\Win64
 /external:I ThirdParty\LibTiff\Source
+<<<<<<< HEAD
 /external:I "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\INCLUDE"
 /external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt"
 /external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared"
@@ -289,6 +299,19 @@ E:\github\CityBuilder\framework\Intermediate\Build\Win64\UnrealEditor\Inc\framew
 /Fp"E:\github\CityBuilder\framework\Intermediate\Build\Win64\x64\frameworkEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_1.h.pch"
 /Fo"E:\github\CityBuilder\framework\Intermediate\Build\Win64\x64\UnrealEditor\Development\framework\framework.init.gen.cpp.lc.obj"
 /sourceDependencies"E:\github\CityBuilder\framework\Intermediate\Build\Win64\x64\UnrealEditor\Development\framework\framework.init.gen.cpp.dep.lc.json"
+=======
+/external:I "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\INCLUDE"
+/external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"
+/external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"
+/external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"
+/external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"
+/FI"C:\Users\user\Documents\GitHub\CityBuilder\framework\Intermediate\Build\Win64\x64\frameworkEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_1.h"
+/FI"C:\Users\user\Documents\GitHub\CityBuilder\framework\Intermediate\Build\Win64\x64\UnrealEditor\Development\framework\Definitions.framework.h"
+/Yu"C:\Users\user\Documents\GitHub\CityBuilder\framework\Intermediate\Build\Win64\x64\frameworkEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_1.h"
+/Fp"C:\Users\user\Documents\GitHub\CityBuilder\framework\Intermediate\Build\Win64\x64\frameworkEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_1.h.pch"
+/Fo"C:\Users\user\Documents\GitHub\CityBuilder\framework\Intermediate\Build\Win64\x64\UnrealEditor\Development\framework\framework.init.gen.cpp.lc.obj"
+/sourceDependencies"C:\Users\user\Documents\GitHub\CityBuilder\framework\Intermediate\Build\Win64\x64\UnrealEditor\Development\framework\framework.init.gen.cpp.dep.lc.json"
+>>>>>>> feature/camera
 /Zc:inline
 /nologo
 /Oi

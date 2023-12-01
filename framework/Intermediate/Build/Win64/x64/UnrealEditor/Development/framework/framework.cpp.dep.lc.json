@@ -1,12 +1,21 @@
 {
     "Version": "1.2",
     "Data": {
+<<<<<<< HEAD
         "Source": "e:\\github\\citybuilder\\framework\\source\\framework\\framework.cpp",
         "ProvidedModule": "",
         "PCH": "e:\\github\\citybuilder\\framework\\intermediate\\build\\win64\\x64\\frameworkeditor\\development\\engine\\sharedpch.engine.shadowerrors.inclorderunreal5_1.h.pch",
         "Includes": [
             "e:\\github\\citybuilder\\framework\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\framework\\definitions.framework.h",
             "e:\\github\\citybuilder\\framework\\source\\framework\\framework.h"
+=======
+        "Source": "c:\\users\\user\\documents\\github\\citybuilder\\framework\\source\\framework\\framework.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\user\\documents\\github\\citybuilder\\framework\\intermediate\\build\\win64\\x64\\frameworkeditor\\development\\engine\\sharedpch.engine.shadowerrors.inclorderunreal5_1.h.pch",
+        "Includes": [
+            "c:\\users\\user\\documents\\github\\citybuilder\\framework\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\framework\\definitions.framework.h",
+            "c:\\users\\user\\documents\\github\\citybuilder\\framework\\source\\framework\\framework.h"
+>>>>>>> feature/camera
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

@@ -24,18 +24,39 @@ protected:
 
 	UPROPERTY(VisibleAnyWhere, BlueprintReadOnly, Category = Camera)
 	class UCameraComponent* MCCamera;
+	
+	UPROPERTY(VisibleAnyWhere, BlueprintReadOnly, Category = Camera)
+	class USpringArmComponent* MCSpringArm;
 
-	UPROPERTY(EditAnyWhere, BlueprintReadWrite, Category = Camera)
-	float CameraRotationSpeed = 45.0f;
+	UPROPERTY(EditAnyWhere, BlueprintReadWrite, Category = Rotation)
+	float CameraRotationSpeed = 10.0f;
 
-	UPROPERTY(EditAnyWhere, BlueprintReadWrite, Category = Camera)
+	UPROPERTY(EditAnyWhere, BlueprintReadWrite, Category = Zoom)
 	float ZoomSpeed = 10.0f;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Camera)
-	float MinZoomDistance = 100.0f;
+	UPROPERTY(EditAnyWhere, BlueprintReadWrite, Category = Zoom)
+	float ZoomMin = 300.0f;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Camera)
-	float MaxZoomDistance = 2000.0f;
+	UPROPERTY(EditAnyWhere, BlueprintReadWrite, Category = Zoom)
+	float ZoomMax = 2000.0f;
+
+	UPROPERTY(EditAnyWhere, BlueprintReadWrite, Category = Move)
+	float InitialMovementSpeed = 600.0f;
+
+	UPROPERTY(EditAnyWhere, BlueprintReadWrite, Category = Rotation)
+	float CameraMinClamp = 210.0f;
+
+	UPROPERTY(EditAnyWhere, BlueprintReadWrite, Category = Rotation)
+	float CameraMaxClamp = 350.0f;
+
+	UPROPERTY(EditAnyWhere, BlueprintReadOnly, Category = Rotation)
+	bool bAllowCameraRotation = false;
+
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Camera)
+	//float MinZoomDistance = 100.0f;
+
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Camera)
+	//float MaxZoomDistance = 2000.0f;
 
 public:
 	// Called every frame
@@ -44,10 +65,35 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	virtual void MouseWheelZoom(float Value);
+	/*virtual void MouseWheelZoom(float Value);*/
 
+	UFUNCTION()
 	void MoveForward(float Value);
+
+	UFUNCTION()
 	void MoveRight(float Value);
+
+	//UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = "Custom Function")
+	//void UpdateMovementSpeed();
+
+	UFUNCTION()
 	void Rotate(float Value);
 
+	UFUNCTION()
+	void CameraPitch(float Value);
+
+	UFUNCTION(BlueprintCallable, Category = Camera)
+	void CameraZoom(float Magnitude);
+
+	UFUNCTION()
+	void ZoomIn();
+
+	UFUNCTION()
+	void ZoomOut();
+
+	UFUNCTION()
+	void OnMouseRightClick();
+
+	UFUNCTION()
+	void OnMouseRightRelease();
 };

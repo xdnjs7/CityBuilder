@@ -15,8 +15,32 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define FRAMEWORK_MovingCamera_generated_h
 
 #define FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_MovingCamera_h_12_SPARSE_DATA
-#define FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_MovingCamera_h_12_RPC_WRAPPERS
-#define FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_MovingCamera_h_12_RPC_WRAPPERS_NO_PURE_DECLS
+#define FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_MovingCamera_h_12_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execOnMouseRightRelease); \
+	DECLARE_FUNCTION(execOnMouseRightClick); \
+	DECLARE_FUNCTION(execZoomOut); \
+	DECLARE_FUNCTION(execZoomIn); \
+	DECLARE_FUNCTION(execCameraZoom); \
+	DECLARE_FUNCTION(execCameraPitch); \
+	DECLARE_FUNCTION(execRotate); \
+	DECLARE_FUNCTION(execMoveRight); \
+	DECLARE_FUNCTION(execMoveForward);
+
+
+#define FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_MovingCamera_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execOnMouseRightRelease); \
+	DECLARE_FUNCTION(execOnMouseRightClick); \
+	DECLARE_FUNCTION(execZoomOut); \
+	DECLARE_FUNCTION(execZoomIn); \
+	DECLARE_FUNCTION(execCameraZoom); \
+	DECLARE_FUNCTION(execCameraPitch); \
+	DECLARE_FUNCTION(execRotate); \
+	DECLARE_FUNCTION(execMoveRight); \
+	DECLARE_FUNCTION(execMoveForward);
+
+
 #define FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_MovingCamera_h_12_ACCESSORS
 #define FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_MovingCamera_h_12_INCLASS_NO_PURE_DECLS \
 private: \

@@ -28,9 +28,33 @@
     <None Include="..\..\Config\DefaultInput.ini">
       <Filter>Config</Filter>
     </None>
+    <Filter Include="Platforms">
+      <UniqueIdentifier>{ED49A36C-4FD5-37E5-A2AC-E11BEF4F21CF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platforms\HoloLens">
+      <UniqueIdentifier>{28125F47-4973-377C-9D77-EBC3C72EC856}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platforms\HoloLens\Config">
+      <UniqueIdentifier>{D3BF39CB-FA64-39E2-A327-B5021BA69773}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Platforms\HoloLens\Config\HoloLensEngine.ini">
+      <Filter>Platforms\HoloLens\Config</Filter>
+    </None>
     <Filter Include="Source\framework">
       <UniqueIdentifier>{2F6C4CED-AD76-3133-A8BE-A2C0E50F1918}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\framework\CB_Clickable.cpp">
+      <Filter>Source\framework</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\framework\CB_Clickable.h">
+      <Filter>Source\framework</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\framework\CB_PlayerController.cpp">
+      <Filter>Source\framework</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\framework\CB_PlayerController.h">
+      <Filter>Source\framework</Filter>
+    </ClInclude>
     <None Include="..\..\Source\framework\framework.Build.cs">
       <Filter>Source\framework</Filter>
     </None>
