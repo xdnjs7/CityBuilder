@@ -73,9 +73,6 @@ public:
 	UFUNCTION()
 	void MoveRight(float Value);
 
-	//UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = "Custom Function")
-	//void UpdateMovementSpeed();
-
 	UFUNCTION()
 	void Rotate(float Value);
 

@@ -81,6 +81,7 @@ void AMovingCamera::SetupPlayerInputComponent(UInputComponent* PlayerInputCompon
 
 void AMovingCamera::MoveForward(float Value)
 {
+    UE_LOG(LogTemp, Warning, TEXT("MoveForward Called: %f"), Value);
 
     FVector Direction = UKismetMathLibrary::GetForwardVector(FRotator(0.0f, GetControlRotation().Yaw, 0.0f));
     AddMovementInput(Direction, Value);
@@ -88,32 +89,11 @@ void AMovingCamera::MoveForward(float Value)
 
 void AMovingCamera::MoveRight(float Value)
 {
+    UE_LOG(LogTemp, Warning, TEXT("MoveRight Called: %f"), Value);
 
     FVector Direction = UKismetMathLibrary::GetRightVector(FRotator(0.0f, GetControlRotation().Yaw, 0.0f));
     AddMovementInput(Direction, Value);
 }
-//
-//void AMovingCamera::UpdateMovementSpeed_Implementation()
-//{
-//    if (USpringArmComponent* SpringArm = FindComponentByClass<USpringArmComponent>())
-//    {
-//        if (UCharacterMovementComponent* CharacterMovement = GetCharacterMovement())
-//        {
-//            float TargetArmLength = SpringArm->TargetArmLength;
-//            float NewMaxWalkSpeed = (TargetArmLength / ZoomMin) * InitialMovementSpeed;
-//
-//            CharacterMovement->MaxWalkSpeed = NewMaxWalkSpeed;
-//        }
-//        else
-//        {
-//            UE_LOG(LogTemp, Warning, TEXT("CharacterMovementComponent is nullptr"));
-//        }
-//    }
-//    else
-//    {
-//        UE_LOG(LogTemp, Warning, TEXT("SpringArmComponent is nullptr"));
-//    }
-//}
 
 void AMovingCamera::OnMouseRightClick()
 {

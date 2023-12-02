@@ -16,9 +16,4 @@ class FRAMEWORK_API ACB_PlayerController : public APlayerController
 	
 public:
 
-	UPROPERTY(EditAnyWhere, BlueprintReadWrite, Category = Camera)
-	float Magnitude = 0.0f;
-
-	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = Camera)
-	void CameraOrbit();	
 };

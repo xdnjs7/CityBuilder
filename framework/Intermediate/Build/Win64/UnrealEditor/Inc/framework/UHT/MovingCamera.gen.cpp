@@ -295,9 +295,7 @@ void EmptyLinkFunctionForGeneratedCodeMovingCamera() {}
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMovingCamera_Rotate_Statics::Function_MetaDataParams[] = {
-		{ "Comment", "//UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = \"Custom Function\")\n//void UpdateMovementSpeed();\n" },
 		{ "ModuleRelativePath", "MovingCamera.h" },
-		{ "ToolTip", "UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = \"Custom Function\")\nvoid UpdateMovementSpeed();" },
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AMovingCamera_Rotate_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMovingCamera, nullptr, "Rotate", nullptr, nullptr, sizeof(Z_Construct_UFunction_AMovingCamera_Rotate_Statics::MovingCamera_eventRotate_Parms), Z_Construct_UFunction_AMovingCamera_Rotate_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMovingCamera_Rotate_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMovingCamera_Rotate_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMovingCamera_Rotate_Statics::Function_MetaDataParams)) };
@@ -426,7 +424,7 @@ void EmptyLinkFunctionForGeneratedCodeMovingCamera() {}
 		{ &Z_Construct_UFunction_AMovingCamera_MoveRight, "MoveRight" }, // 54255481
 		{ &Z_Construct_UFunction_AMovingCamera_OnMouseRightClick, "OnMouseRightClick" }, // 1340384980
 		{ &Z_Construct_UFunction_AMovingCamera_OnMouseRightRelease, "OnMouseRightRelease" }, // 587920309
-		{ &Z_Construct_UFunction_AMovingCamera_Rotate, "Rotate" }, // 430854726
+		{ &Z_Construct_UFunction_AMovingCamera_Rotate, "Rotate" }, // 4211546911
 		{ &Z_Construct_UFunction_AMovingCamera_ZoomIn, "ZoomIn" }, // 419364055
 		{ &Z_Construct_UFunction_AMovingCamera_ZoomOut, "ZoomOut" }, // 3848460600
 	};
@@ -571,9 +569,9 @@ void EmptyLinkFunctionForGeneratedCodeMovingCamera() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_MovingCamera_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AMovingCamera, AMovingCamera::StaticClass, TEXT("AMovingCamera"), &Z_Registration_Info_UClass_AMovingCamera, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMovingCamera), 3267530935U) },
+		{ Z_Construct_UClass_AMovingCamera, AMovingCamera::StaticClass, TEXT("AMovingCamera"), &Z_Registration_Info_UClass_AMovingCamera, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMovingCamera), 365967169U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_MovingCamera_h_4025730185(TEXT("/Script/framework"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_MovingCamera_h_3316717718(TEXT("/Script/framework"),
 		Z_CompiledInDeferFile_FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_MovingCamera_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_MovingCamera_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
