@@ -68,29 +68,29 @@ public:
 	/*virtual void MouseWheelZoom(float Value);*/
 
 	UFUNCTION()
-	void MoveForward(float Value);
+	void AMoveForward(float Value);
 
 	UFUNCTION()
-	void MoveRight(float Value);
+	void AMoveRight(float Value);
 
 	UFUNCTION()
-	void Rotate(float Value);
+	void ARotate(float Value);
 
 	UFUNCTION()
-	void CameraPitch(float Value);
+	void ACameraPitch(float Value);
 
 	UFUNCTION(BlueprintCallable, Category = Camera)
-	void CameraZoom(float Magnitude);
+	void ACameraZoom(float Magnitude);
 
 	UFUNCTION()
-	void ZoomIn();
+	void AZoomIn();
 
 	UFUNCTION()
-	void ZoomOut();
+	void AZoomOut();
 
 	UFUNCTION()
-	void OnMouseRightClick();
+	void AOnMouseRightClick();
 
 	UFUNCTION()
-	void OnMouseRightRelease();
+	void AOnMouseRightRelease();
 };

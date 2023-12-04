@@ -57,29 +57,29 @@ void AMovingCamera::SetupPlayerInputComponent(UInputComponent* PlayerInputCompon
     Super::SetupPlayerInputComponent(PlayerInputComponent);
 
     // 카메라 이동
-    PlayerInputComponent->BindAxis("MoveForward", this, &AMovingCamera::MoveForward);
-    PlayerInputComponent->BindAxis("MoveRight", this, &AMovingCamera::MoveRight);
+    PlayerInputComponent->BindAxis("MoveForward", this, &AMovingCamera::AMoveForward);
+    PlayerInputComponent->BindAxis("MoveRight", this, &AMovingCamera::AMoveRight);
 
     // 카메라 좌우 회전
-    PlayerInputComponent->BindAxis("Rotate", this, &AMovingCamera::Rotate);
+    PlayerInputComponent->BindAxis("Rotate", this, &AMovingCamera::ARotate);
 
     // 카메라 상하 회전
-    PlayerInputComponent->BindAxis("CameraPitch", this, &AMovingCamera::CameraPitch);
+    PlayerInputComponent->BindAxis("CameraPitch", this, &AMovingCamera::ACameraPitch);
 
     // 카메라 줌
-    PlayerInputComponent->BindAction("ZoomIn", IE_Pressed, this, &AMovingCamera::ZoomIn);
-    PlayerInputComponent->BindAction("ZoomOut", IE_Pressed, this, &AMovingCamera::ZoomOut);
+    PlayerInputComponent->BindAction("ZoomIn", IE_Pressed, this, &AMovingCamera::AZoomIn);
+    PlayerInputComponent->BindAction("ZoomOut", IE_Pressed, this, &AMovingCamera::AZoomOut);
 
     // MouseX, MouseY
-    PlayerInputComponent->BindAxis("MouseX", this, &AMovingCamera::Rotate);
-    PlayerInputComponent->BindAxis("MouseY", this, &AMovingCamera::CameraPitch);
+    PlayerInputComponent->BindAxis("MouseX", this, &AMovingCamera::ARotate);
+    PlayerInputComponent->BindAxis("MouseY", this, &AMovingCamera::ACameraPitch);
 
     // 마우스 우클릭
-    PlayerInputComponent->BindAction("MouseRightClick", IE_Pressed, this, &AMovingCamera::OnMouseRightClick);
-    PlayerInputComponent->BindAction("MouseRightClick", IE_Released, this, &AMovingCamera::OnMouseRightRelease);
+    PlayerInputComponent->BindAction("MouseRightClick", IE_Pressed, this, &AMovingCamera::AOnMouseRightClick);
+    PlayerInputComponent->BindAction("MouseRightClick", IE_Released, this, &AMovingCamera::AOnMouseRightRelease);
 }
 
-void AMovingCamera::MoveForward(float Value)
+void AMovingCamera::AMoveForward(float Value)
 {
     UE_LOG(LogTemp, Warning, TEXT("MoveForward Called: %f"), Value);
 
@@ -87,7 +87,7 @@ void AMovingCamera::MoveForward(float Value)
     AddMovementInput(Direction, Value);
 }
 
-void AMovingCamera::MoveRight(float Value)
+void AMovingCamera::AMoveRight(float Value)
 {
     UE_LOG(LogTemp, Warning, TEXT("MoveRight Called: %f"), Value);
 
@@ -95,19 +95,19 @@ void AMovingCamera::MoveRight(float Value)
     AddMovementInput(Direction, Value);
 }
 
-void AMovingCamera::OnMouseRightClick()
+void AMovingCamera::AOnMouseRightClick()
 {
     // 마우스 우클릭 시작 시 회전을 허용
     bAllowCameraRotation = true;
 }
 
-void AMovingCamera::OnMouseRightRelease()
+void AMovingCamera::AOnMouseRightRelease()
 {
     // 마우스 우클릭 종료 시 회전을 중지
     bAllowCameraRotation = false;
 }
 
-void AMovingCamera::Rotate(float Value)
+void AMovingCamera::ARotate(float Value)
 {
     UE_LOG(LogTemp, Warning, TEXT("RotateRight Called"));
 
@@ -119,7 +119,7 @@ void AMovingCamera::Rotate(float Value)
     }
 }
 
-void AMovingCamera::CameraPitch(float Value)
+void AMovingCamera::ACameraPitch(float Value)
 {
     UE_LOG(LogTemp, Warning, TEXT("CameraPitch Called"));
 
@@ -165,7 +165,7 @@ void AMovingCamera::CameraPitch(float Value)
 //    MCCamera->SetWorldLocation(NewLocation);
 //}
 
-void AMovingCamera::CameraZoom(float Magnitude)
+void AMovingCamera::ACameraZoom(float Magnitude)
 {
     // 현재 Arm 길이를 가져옴
     float CurrentArmLength = MCSpringArm->TargetArmLength;
@@ -180,12 +180,12 @@ void AMovingCamera::CameraZoom(float Magnitude)
     MCSpringArm->TargetArmLength = ClampedArmLength;
 }
 
-void AMovingCamera::ZoomIn()
+void AMovingCamera::AZoomIn()
 {
-    CameraZoom(-10.0f);
+    ACameraZoom(-10.0f);
 }
 
-void AMovingCamera::ZoomOut()
+void AMovingCamera::AZoomOut()
 {
-    CameraZoom(10.0f);
+    ACameraZoom(10.0f);
 }

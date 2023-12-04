@@ -17,93 +17,93 @@ void EmptyLinkFunctionForGeneratedCodeMovingCamera() {}
 	FRAMEWORK_API UClass* Z_Construct_UClass_AMovingCamera_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_framework();
 // End Cross Module References
-	DEFINE_FUNCTION(AMovingCamera::execOnMouseRightRelease)
+	DEFINE_FUNCTION(AMovingCamera::execAOnMouseRightRelease)
 	{
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->OnMouseRightRelease();
+		P_THIS->AOnMouseRightRelease();
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(AMovingCamera::execOnMouseRightClick)
+	DEFINE_FUNCTION(AMovingCamera::execAOnMouseRightClick)
 	{
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->OnMouseRightClick();
+		P_THIS->AOnMouseRightClick();
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(AMovingCamera::execZoomOut)
+	DEFINE_FUNCTION(AMovingCamera::execAZoomOut)
 	{
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->ZoomOut();
+		P_THIS->AZoomOut();
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(AMovingCamera::execZoomIn)
+	DEFINE_FUNCTION(AMovingCamera::execAZoomIn)
 	{
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->ZoomIn();
+		P_THIS->AZoomIn();
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(AMovingCamera::execCameraZoom)
+	DEFINE_FUNCTION(AMovingCamera::execACameraZoom)
 	{
 		P_GET_PROPERTY(FFloatProperty,Z_Param_Magnitude);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->CameraZoom(Z_Param_Magnitude);
+		P_THIS->ACameraZoom(Z_Param_Magnitude);
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(AMovingCamera::execCameraPitch)
+	DEFINE_FUNCTION(AMovingCamera::execACameraPitch)
 	{
 		P_GET_PROPERTY(FFloatProperty,Z_Param_Value);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->CameraPitch(Z_Param_Value);
+		P_THIS->ACameraPitch(Z_Param_Value);
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(AMovingCamera::execRotate)
+	DEFINE_FUNCTION(AMovingCamera::execARotate)
 	{
 		P_GET_PROPERTY(FFloatProperty,Z_Param_Value);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->Rotate(Z_Param_Value);
+		P_THIS->ARotate(Z_Param_Value);
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(AMovingCamera::execMoveRight)
+	DEFINE_FUNCTION(AMovingCamera::execAMoveRight)
 	{
 		P_GET_PROPERTY(FFloatProperty,Z_Param_Value);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->MoveRight(Z_Param_Value);
+		P_THIS->AMoveRight(Z_Param_Value);
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(AMovingCamera::execMoveForward)
+	DEFINE_FUNCTION(AMovingCamera::execAMoveForward)
 	{
 		P_GET_PROPERTY(FFloatProperty,Z_Param_Value);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->MoveForward(Z_Param_Value);
+		P_THIS->AMoveForward(Z_Param_Value);
 		P_NATIVE_END;
 	}
 	void AMovingCamera::StaticRegisterNativesAMovingCamera()
 	{
 		UClass* Class = AMovingCamera::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
-			{ "CameraPitch", &AMovingCamera::execCameraPitch },
-			{ "CameraZoom", &AMovingCamera::execCameraZoom },
-			{ "MoveForward", &AMovingCamera::execMoveForward },
-			{ "MoveRight", &AMovingCamera::execMoveRight },
-			{ "OnMouseRightClick", &AMovingCamera::execOnMouseRightClick },
-			{ "OnMouseRightRelease", &AMovingCamera::execOnMouseRightRelease },
-			{ "Rotate", &AMovingCamera::execRotate },
-			{ "ZoomIn", &AMovingCamera::execZoomIn },
-			{ "ZoomOut", &AMovingCamera::execZoomOut },
+			{ "ACameraPitch", &AMovingCamera::execACameraPitch },
+			{ "ACameraZoom", &AMovingCamera::execACameraZoom },
+			{ "AMoveForward", &AMovingCamera::execAMoveForward },
+			{ "AMoveRight", &AMovingCamera::execAMoveRight },
+			{ "AOnMouseRightClick", &AMovingCamera::execAOnMouseRightClick },
+			{ "AOnMouseRightRelease", &AMovingCamera::execAOnMouseRightRelease },
+			{ "ARotate", &AMovingCamera::execARotate },
+			{ "AZoomIn", &AMovingCamera::execAZoomIn },
+			{ "AZoomOut", &AMovingCamera::execAZoomOut },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
-	struct Z_Construct_UFunction_AMovingCamera_CameraPitch_Statics
+	struct Z_Construct_UFunction_AMovingCamera_ACameraPitch_Statics
 	{
-		struct MovingCamera_eventCameraPitch_Parms
+		struct MovingCamera_eventACameraPitch_Parms
 		{
 			float Value;
 		};
@@ -114,28 +114,28 @@ void EmptyLinkFunctionForGeneratedCodeMovingCamera() {}
 #endif
 		static const UECodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_AMovingCamera_CameraPitch_Statics::NewProp_Value = { "Value", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(MovingCamera_eventCameraPitch_Parms, Value), METADATA_PARAMS(nullptr, 0) };
-	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMovingCamera_CameraPitch_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMovingCamera_CameraPitch_Statics::NewProp_Value,
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_AMovingCamera_ACameraPitch_Statics::NewProp_Value = { "Value", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(MovingCamera_eventACameraPitch_Parms, Value), METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMovingCamera_ACameraPitch_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMovingCamera_ACameraPitch_Statics::NewProp_Value,
 	};
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMovingCamera_CameraPitch_Statics::Function_MetaDataParams[] = {
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMovingCamera_ACameraPitch_Statics::Function_MetaDataParams[] = {
 		{ "ModuleRelativePath", "MovingCamera.h" },
 	};
 #endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AMovingCamera_CameraPitch_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMovingCamera, nullptr, "CameraPitch", nullptr, nullptr, sizeof(Z_Construct_UFunction_AMovingCamera_CameraPitch_Statics::MovingCamera_eventCameraPitch_Parms), Z_Construct_UFunction_AMovingCamera_CameraPitch_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMovingCamera_CameraPitch_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMovingCamera_CameraPitch_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMovingCamera_CameraPitch_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_AMovingCamera_CameraPitch()
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AMovingCamera_ACameraPitch_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMovingCamera, nullptr, "ACameraPitch", nullptr, nullptr, sizeof(Z_Construct_UFunction_AMovingCamera_ACameraPitch_Statics::MovingCamera_eventACameraPitch_Parms), Z_Construct_UFunction_AMovingCamera_ACameraPitch_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMovingCamera_ACameraPitch_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMovingCamera_ACameraPitch_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMovingCamera_ACameraPitch_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AMovingCamera_ACameraPitch()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AMovingCamera_CameraPitch_Statics::FuncParams);
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AMovingCamera_ACameraPitch_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
-	struct Z_Construct_UFunction_AMovingCamera_CameraZoom_Statics
+	struct Z_Construct_UFunction_AMovingCamera_ACameraZoom_Statics
 	{
-		struct MovingCamera_eventCameraZoom_Parms
+		struct MovingCamera_eventACameraZoom_Parms
 		{
 			float Magnitude;
 		};
@@ -146,29 +146,29 @@ void EmptyLinkFunctionForGeneratedCodeMovingCamera() {}
 #endif
 		static const UECodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_AMovingCamera_CameraZoom_Statics::NewProp_Magnitude = { "Magnitude", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(MovingCamera_eventCameraZoom_Parms, Magnitude), METADATA_PARAMS(nullptr, 0) };
-	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMovingCamera_CameraZoom_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMovingCamera_CameraZoom_Statics::NewProp_Magnitude,
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_AMovingCamera_ACameraZoom_Statics::NewProp_Magnitude = { "Magnitude", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(MovingCamera_eventACameraZoom_Parms, Magnitude), METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMovingCamera_ACameraZoom_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMovingCamera_ACameraZoom_Statics::NewProp_Magnitude,
 	};
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMovingCamera_CameraZoom_Statics::Function_MetaDataParams[] = {
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMovingCamera_ACameraZoom_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Camera" },
 		{ "ModuleRelativePath", "MovingCamera.h" },
 	};
 #endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AMovingCamera_CameraZoom_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMovingCamera, nullptr, "CameraZoom", nullptr, nullptr, sizeof(Z_Construct_UFunction_AMovingCamera_CameraZoom_Statics::MovingCamera_eventCameraZoom_Parms), Z_Construct_UFunction_AMovingCamera_CameraZoom_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMovingCamera_CameraZoom_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMovingCamera_CameraZoom_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMovingCamera_CameraZoom_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_AMovingCamera_CameraZoom()
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AMovingCamera_ACameraZoom_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMovingCamera, nullptr, "ACameraZoom", nullptr, nullptr, sizeof(Z_Construct_UFunction_AMovingCamera_ACameraZoom_Statics::MovingCamera_eventACameraZoom_Parms), Z_Construct_UFunction_AMovingCamera_ACameraZoom_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMovingCamera_ACameraZoom_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMovingCamera_ACameraZoom_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMovingCamera_ACameraZoom_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AMovingCamera_ACameraZoom()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AMovingCamera_CameraZoom_Statics::FuncParams);
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AMovingCamera_ACameraZoom_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
-	struct Z_Construct_UFunction_AMovingCamera_MoveForward_Statics
+	struct Z_Construct_UFunction_AMovingCamera_AMoveForward_Statics
 	{
-		struct MovingCamera_eventMoveForward_Parms
+		struct MovingCamera_eventAMoveForward_Parms
 		{
 			float Value;
 		};
@@ -179,30 +179,30 @@ void EmptyLinkFunctionForGeneratedCodeMovingCamera() {}
 #endif
 		static const UECodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_AMovingCamera_MoveForward_Statics::NewProp_Value = { "Value", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(MovingCamera_eventMoveForward_Parms, Value), METADATA_PARAMS(nullptr, 0) };
-	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMovingCamera_MoveForward_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMovingCamera_MoveForward_Statics::NewProp_Value,
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_AMovingCamera_AMoveForward_Statics::NewProp_Value = { "Value", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(MovingCamera_eventAMoveForward_Parms, Value), METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMovingCamera_AMoveForward_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMovingCamera_AMoveForward_Statics::NewProp_Value,
 	};
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMovingCamera_MoveForward_Statics::Function_MetaDataParams[] = {
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMovingCamera_AMoveForward_Statics::Function_MetaDataParams[] = {
 		{ "Comment", "/*virtual void MouseWheelZoom(float Value);*/" },
 		{ "ModuleRelativePath", "MovingCamera.h" },
 		{ "ToolTip", "virtual void MouseWheelZoom(float Value);" },
 	};
 #endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AMovingCamera_MoveForward_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMovingCamera, nullptr, "MoveForward", nullptr, nullptr, sizeof(Z_Construct_UFunction_AMovingCamera_MoveForward_Statics::MovingCamera_eventMoveForward_Parms), Z_Construct_UFunction_AMovingCamera_MoveForward_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMovingCamera_MoveForward_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMovingCamera_MoveForward_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMovingCamera_MoveForward_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_AMovingCamera_MoveForward()
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AMovingCamera_AMoveForward_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMovingCamera, nullptr, "AMoveForward", nullptr, nullptr, sizeof(Z_Construct_UFunction_AMovingCamera_AMoveForward_Statics::MovingCamera_eventAMoveForward_Parms), Z_Construct_UFunction_AMovingCamera_AMoveForward_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMovingCamera_AMoveForward_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMovingCamera_AMoveForward_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMovingCamera_AMoveForward_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AMovingCamera_AMoveForward()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AMovingCamera_MoveForward_Statics::FuncParams);
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AMovingCamera_AMoveForward_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
-	struct Z_Construct_UFunction_AMovingCamera_MoveRight_Statics
+	struct Z_Construct_UFunction_AMovingCamera_AMoveRight_Statics
 	{
-		struct MovingCamera_eventMoveRight_Parms
+		struct MovingCamera_eventAMoveRight_Parms
 		{
 			float Value;
 		};
@@ -213,26 +213,26 @@ void EmptyLinkFunctionForGeneratedCodeMovingCamera() {}
 #endif
 		static const UECodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_AMovingCamera_MoveRight_Statics::NewProp_Value = { "Value", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(MovingCamera_eventMoveRight_Parms, Value), METADATA_PARAMS(nullptr, 0) };
-	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMovingCamera_MoveRight_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMovingCamera_MoveRight_Statics::NewProp_Value,
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_AMovingCamera_AMoveRight_Statics::NewProp_Value = { "Value", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(MovingCamera_eventAMoveRight_Parms, Value), METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMovingCamera_AMoveRight_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMovingCamera_AMoveRight_Statics::NewProp_Value,
 	};
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMovingCamera_MoveRight_Statics::Function_MetaDataParams[] = {
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMovingCamera_AMoveRight_Statics::Function_MetaDataParams[] = {
 		{ "ModuleRelativePath", "MovingCamera.h" },
 	};
 #endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AMovingCamera_MoveRight_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMovingCamera, nullptr, "MoveRight", nullptr, nullptr, sizeof(Z_Construct_UFunction_AMovingCamera_MoveRight_Statics::MovingCamera_eventMoveRight_Parms), Z_Construct_UFunction_AMovingCamera_MoveRight_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMovingCamera_MoveRight_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMovingCamera_MoveRight_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMovingCamera_MoveRight_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_AMovingCamera_MoveRight()
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AMovingCamera_AMoveRight_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMovingCamera, nullptr, "AMoveRight", nullptr, nullptr, sizeof(Z_Construct_UFunction_AMovingCamera_AMoveRight_Statics::MovingCamera_eventAMoveRight_Parms), Z_Construct_UFunction_AMovingCamera_AMoveRight_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMovingCamera_AMoveRight_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMovingCamera_AMoveRight_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMovingCamera_AMoveRight_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AMovingCamera_AMoveRight()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AMovingCamera_MoveRight_Statics::FuncParams);
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AMovingCamera_AMoveRight_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
-	struct Z_Construct_UFunction_AMovingCamera_OnMouseRightClick_Statics
+	struct Z_Construct_UFunction_AMovingCamera_AOnMouseRightClick_Statics
 	{
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
@@ -240,21 +240,21 @@ void EmptyLinkFunctionForGeneratedCodeMovingCamera() {}
 		static const UECodeGen_Private::FFunctionParams FuncParams;
 	};
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMovingCamera_OnMouseRightClick_Statics::Function_MetaDataParams[] = {
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMovingCamera_AOnMouseRightClick_Statics::Function_MetaDataParams[] = {
 		{ "ModuleRelativePath", "MovingCamera.h" },
 	};
 #endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AMovingCamera_OnMouseRightClick_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMovingCamera, nullptr, "OnMouseRightClick", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMovingCamera_OnMouseRightClick_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMovingCamera_OnMouseRightClick_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_AMovingCamera_OnMouseRightClick()
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AMovingCamera_AOnMouseRightClick_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMovingCamera, nullptr, "AOnMouseRightClick", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMovingCamera_AOnMouseRightClick_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMovingCamera_AOnMouseRightClick_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AMovingCamera_AOnMouseRightClick()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AMovingCamera_OnMouseRightClick_Statics::FuncParams);
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AMovingCamera_AOnMouseRightClick_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
-	struct Z_Construct_UFunction_AMovingCamera_OnMouseRightRelease_Statics
+	struct Z_Construct_UFunction_AMovingCamera_AOnMouseRightRelease_Statics
 	{
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
@@ -262,23 +262,23 @@ void EmptyLinkFunctionForGeneratedCodeMovingCamera() {}
 		static const UECodeGen_Private::FFunctionParams FuncParams;
 	};
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMovingCamera_OnMouseRightRelease_Statics::Function_MetaDataParams[] = {
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMovingCamera_AOnMouseRightRelease_Statics::Function_MetaDataParams[] = {
 		{ "ModuleRelativePath", "MovingCamera.h" },
 	};
 #endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AMovingCamera_OnMouseRightRelease_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMovingCamera, nullptr, "OnMouseRightRelease", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMovingCamera_OnMouseRightRelease_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMovingCamera_OnMouseRightRelease_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_AMovingCamera_OnMouseRightRelease()
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AMovingCamera_AOnMouseRightRelease_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMovingCamera, nullptr, "AOnMouseRightRelease", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMovingCamera_AOnMouseRightRelease_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMovingCamera_AOnMouseRightRelease_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AMovingCamera_AOnMouseRightRelease()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AMovingCamera_OnMouseRightRelease_Statics::FuncParams);
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AMovingCamera_AOnMouseRightRelease_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
-	struct Z_Construct_UFunction_AMovingCamera_Rotate_Statics
+	struct Z_Construct_UFunction_AMovingCamera_ARotate_Statics
 	{
-		struct MovingCamera_eventRotate_Parms
+		struct MovingCamera_eventARotate_Parms
 		{
 			float Value;
 		};
@@ -289,26 +289,26 @@ void EmptyLinkFunctionForGeneratedCodeMovingCamera() {}
 #endif
 		static const UECodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_AMovingCamera_Rotate_Statics::NewProp_Value = { "Value", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(MovingCamera_eventRotate_Parms, Value), METADATA_PARAMS(nullptr, 0) };
-	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMovingCamera_Rotate_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMovingCamera_Rotate_Statics::NewProp_Value,
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_AMovingCamera_ARotate_Statics::NewProp_Value = { "Value", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(MovingCamera_eventARotate_Parms, Value), METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMovingCamera_ARotate_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMovingCamera_ARotate_Statics::NewProp_Value,
 	};
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMovingCamera_Rotate_Statics::Function_MetaDataParams[] = {
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMovingCamera_ARotate_Statics::Function_MetaDataParams[] = {
 		{ "ModuleRelativePath", "MovingCamera.h" },
 	};
 #endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AMovingCamera_Rotate_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMovingCamera, nullptr, "Rotate", nullptr, nullptr, sizeof(Z_Construct_UFunction_AMovingCamera_Rotate_Statics::MovingCamera_eventRotate_Parms), Z_Construct_UFunction_AMovingCamera_Rotate_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMovingCamera_Rotate_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMovingCamera_Rotate_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMovingCamera_Rotate_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_AMovingCamera_Rotate()
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AMovingCamera_ARotate_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMovingCamera, nullptr, "ARotate", nullptr, nullptr, sizeof(Z_Construct_UFunction_AMovingCamera_ARotate_Statics::MovingCamera_eventARotate_Parms), Z_Construct_UFunction_AMovingCamera_ARotate_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMovingCamera_ARotate_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMovingCamera_ARotate_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMovingCamera_ARotate_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AMovingCamera_ARotate()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AMovingCamera_Rotate_Statics::FuncParams);
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AMovingCamera_ARotate_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
-	struct Z_Construct_UFunction_AMovingCamera_ZoomIn_Statics
+	struct Z_Construct_UFunction_AMovingCamera_AZoomIn_Statics
 	{
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
@@ -316,21 +316,21 @@ void EmptyLinkFunctionForGeneratedCodeMovingCamera() {}
 		static const UECodeGen_Private::FFunctionParams FuncParams;
 	};
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMovingCamera_ZoomIn_Statics::Function_MetaDataParams[] = {
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMovingCamera_AZoomIn_Statics::Function_MetaDataParams[] = {
 		{ "ModuleRelativePath", "MovingCamera.h" },
 	};
 #endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AMovingCamera_ZoomIn_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMovingCamera, nullptr, "ZoomIn", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMovingCamera_ZoomIn_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMovingCamera_ZoomIn_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_AMovingCamera_ZoomIn()
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AMovingCamera_AZoomIn_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMovingCamera, nullptr, "AZoomIn", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMovingCamera_AZoomIn_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMovingCamera_AZoomIn_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AMovingCamera_AZoomIn()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AMovingCamera_ZoomIn_Statics::FuncParams);
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AMovingCamera_AZoomIn_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
-	struct Z_Construct_UFunction_AMovingCamera_ZoomOut_Statics
+	struct Z_Construct_UFunction_AMovingCamera_AZoomOut_Statics
 	{
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
@@ -338,17 +338,17 @@ void EmptyLinkFunctionForGeneratedCodeMovingCamera() {}
 		static const UECodeGen_Private::FFunctionParams FuncParams;
 	};
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMovingCamera_ZoomOut_Statics::Function_MetaDataParams[] = {
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMovingCamera_AZoomOut_Statics::Function_MetaDataParams[] = {
 		{ "ModuleRelativePath", "MovingCamera.h" },
 	};
 #endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AMovingCamera_ZoomOut_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMovingCamera, nullptr, "ZoomOut", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMovingCamera_ZoomOut_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMovingCamera_ZoomOut_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_AMovingCamera_ZoomOut()
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AMovingCamera_AZoomOut_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMovingCamera, nullptr, "AZoomOut", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMovingCamera_AZoomOut_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMovingCamera_AZoomOut_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AMovingCamera_AZoomOut()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AMovingCamera_ZoomOut_Statics::FuncParams);
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AMovingCamera_AZoomOut_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -418,15 +418,15 @@ void EmptyLinkFunctionForGeneratedCodeMovingCamera() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_framework,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AMovingCamera_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_AMovingCamera_CameraPitch, "CameraPitch" }, // 4034491956
-		{ &Z_Construct_UFunction_AMovingCamera_CameraZoom, "CameraZoom" }, // 1258177141
-		{ &Z_Construct_UFunction_AMovingCamera_MoveForward, "MoveForward" }, // 2284062779
-		{ &Z_Construct_UFunction_AMovingCamera_MoveRight, "MoveRight" }, // 54255481
-		{ &Z_Construct_UFunction_AMovingCamera_OnMouseRightClick, "OnMouseRightClick" }, // 1340384980
-		{ &Z_Construct_UFunction_AMovingCamera_OnMouseRightRelease, "OnMouseRightRelease" }, // 587920309
-		{ &Z_Construct_UFunction_AMovingCamera_Rotate, "Rotate" }, // 4211546911
-		{ &Z_Construct_UFunction_AMovingCamera_ZoomIn, "ZoomIn" }, // 419364055
-		{ &Z_Construct_UFunction_AMovingCamera_ZoomOut, "ZoomOut" }, // 3848460600
+		{ &Z_Construct_UFunction_AMovingCamera_ACameraPitch, "ACameraPitch" }, // 142494214
+		{ &Z_Construct_UFunction_AMovingCamera_ACameraZoom, "ACameraZoom" }, // 1877264932
+		{ &Z_Construct_UFunction_AMovingCamera_AMoveForward, "AMoveForward" }, // 1597216028
+		{ &Z_Construct_UFunction_AMovingCamera_AMoveRight, "AMoveRight" }, // 2917130784
+		{ &Z_Construct_UFunction_AMovingCamera_AOnMouseRightClick, "AOnMouseRightClick" }, // 3702932483
+		{ &Z_Construct_UFunction_AMovingCamera_AOnMouseRightRelease, "AOnMouseRightRelease" }, // 3121402967
+		{ &Z_Construct_UFunction_AMovingCamera_ARotate, "ARotate" }, // 857997655
+		{ &Z_Construct_UFunction_AMovingCamera_AZoomIn, "AZoomIn" }, // 1552888397
+		{ &Z_Construct_UFunction_AMovingCamera_AZoomOut, "AZoomOut" }, // 347928071
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMovingCamera_Statics::Class_MetaDataParams[] = {
@@ -569,9 +569,9 @@ void EmptyLinkFunctionForGeneratedCodeMovingCamera() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_MovingCamera_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AMovingCamera, AMovingCamera::StaticClass, TEXT("AMovingCamera"), &Z_Registration_Info_UClass_AMovingCamera, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMovingCamera), 365967169U) },
+		{ Z_Construct_UClass_AMovingCamera, AMovingCamera::StaticClass, TEXT("AMovingCamera"), &Z_Registration_Info_UClass_AMovingCamera, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMovingCamera), 2349280094U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_MovingCamera_h_3316717718(TEXT("/Script/framework"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_MovingCamera_h_3207930561(TEXT("/Script/framework"),
 		Z_CompiledInDeferFile_FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_MovingCamera_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_MovingCamera_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

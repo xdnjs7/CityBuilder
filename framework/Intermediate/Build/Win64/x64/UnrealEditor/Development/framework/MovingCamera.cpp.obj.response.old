@@ -283,10 +283,7 @@ C:\Users\woong\Desktop\CityBuilder\framework\Source\framework\MovingCamera.cpp
 /external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"
 /external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"
 /external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"
-/FI"C:\Users\woong\Desktop\CityBuilder\framework\Intermediate\Build\Win64\x64\frameworkEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_1.h"
-/FI"C:\Users\woong\Desktop\CityBuilder\framework\Intermediate\Build\Win64\x64\UnrealEditor\Development\framework\Definitions.framework.h"
-/Yu"C:\Users\woong\Desktop\CityBuilder\framework\Intermediate\Build\Win64\x64\frameworkEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_1.h"
-/Fp"C:\Users\woong\Desktop\CityBuilder\framework\Intermediate\Build\Win64\x64\frameworkEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_1.h.pch"
+/FI"C:\Users\woong\Desktop\CityBuilder\framework\Intermediate\Build\Win64\x64\UnrealEditor\Development\framework\Definitions.h"
 /Fo"C:\Users\woong\Desktop\CityBuilder\framework\Intermediate\Build\Win64\x64\UnrealEditor\Development\framework\MovingCamera.cpp.obj"
 /sourceDependencies C:\Users\woong\Desktop\CityBuilder\framework\Intermediate\Build\Win64\x64\UnrealEditor\Development\framework\MovingCamera.cpp.dep.json
 /Zc:inline

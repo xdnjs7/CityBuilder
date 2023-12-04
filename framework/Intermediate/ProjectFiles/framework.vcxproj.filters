@@ -49,10 +49,28 @@
     <ClInclude Include="..\..\Source\framework\CB_Clickable.h">
       <Filter>Source\framework</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\framework\CB_GameModeBaseCD.cpp">
+      <Filter>Source\framework</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\framework\CB_GameModeBaseCD.h">
+      <Filter>Source\framework</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\framework\CB_MovingCamera.cpp">
+      <Filter>Source\framework</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\framework\CB_MovingCamera.h">
+      <Filter>Source\framework</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\framework\CB_PlayerController.cpp">
       <Filter>Source\framework</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\framework\CB_PlayerController.h">
+      <Filter>Source\framework</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\framework\CB_PlayerControllerCD.cpp">
+      <Filter>Source\framework</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\framework\CB_PlayerControllerCD.h">
       <Filter>Source\framework</Filter>
     </ClInclude>
     <None Include="..\..\Source\framework\framework.Build.cs">
