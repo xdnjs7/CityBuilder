@@ -9,12 +9,28 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeCB_MovingCamera() {}
 // Cross Module References
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FRotator();
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 	FRAMEWORK_API UClass* Z_Construct_UClass_ACB_MovingCamera();
 	FRAMEWORK_API UClass* Z_Construct_UClass_ACB_MovingCamera_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_framework();
 // End Cross Module References
+	DEFINE_FUNCTION(ACB_MovingCamera::execCameraPitchCal)
+	{
+		P_GET_PROPERTY(FFloatProperty,Z_Param_Value);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FRotator*)Z_Param__Result=P_THIS->CameraPitchCal(Z_Param_Value);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ACB_MovingCamera::execUpdateMovementSpeed)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->UpdateMovementSpeed();
+		P_NATIVE_END;
+	}
 	struct CB_MovingCamera_eventCameraOrbit_Parms
 	{
 		float Value;
@@ -94,6 +110,12 @@ void EmptyLinkFunctionForGeneratedCodeCB_MovingCamera() {}
 	}
 	void ACB_MovingCamera::StaticRegisterNativesACB_MovingCamera()
 	{
+		UClass* Class = ACB_MovingCamera::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "CameraPitchCal", &ACB_MovingCamera::execCameraPitchCal },
+			{ "UpdateMovementSpeed", &ACB_MovingCamera::execUpdateMovementSpeed },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
 	struct Z_Construct_UFunction_ACB_MovingCamera_CameraOrbit_Statics
 	{
@@ -154,6 +176,43 @@ void EmptyLinkFunctionForGeneratedCodeCB_MovingCamera() {}
 		if (!ReturnFunction)
 		{
 			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACB_MovingCamera_CameraPitch_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ACB_MovingCamera_CameraPitchCal_Statics
+	{
+		struct CB_MovingCamera_eventCameraPitchCal_Parms
+		{
+			float Value;
+			FRotator ReturnValue;
+		};
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_Value;
+		static const UECodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_ACB_MovingCamera_CameraPitchCal_Statics::NewProp_Value = { "Value", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(CB_MovingCamera_eventCameraPitchCal_Parms, Value), METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ACB_MovingCamera_CameraPitchCal_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(CB_MovingCamera_eventCameraPitchCal_Parms, ReturnValue), Z_Construct_UScriptStruct_FRotator, METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ACB_MovingCamera_CameraPitchCal_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACB_MovingCamera_CameraPitchCal_Statics::NewProp_Value,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACB_MovingCamera_CameraPitchCal_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACB_MovingCamera_CameraPitchCal_Statics::Function_MetaDataParams[] = {
+		{ "Category", "CameraCalculate" },
+		{ "ModuleRelativePath", "CB_MovingCamera.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACB_MovingCamera_CameraPitchCal_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACB_MovingCamera, nullptr, "CameraPitchCal", nullptr, nullptr, sizeof(Z_Construct_UFunction_ACB_MovingCamera_CameraPitchCal_Statics::CB_MovingCamera_eventCameraPitchCal_Parms), Z_Construct_UFunction_ACB_MovingCamera_CameraPitchCal_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ACB_MovingCamera_CameraPitchCal_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04820401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ACB_MovingCamera_CameraPitchCal_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ACB_MovingCamera_CameraPitchCal_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ACB_MovingCamera_CameraPitchCal()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACB_MovingCamera_CameraPitchCal_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -310,6 +369,31 @@ void EmptyLinkFunctionForGeneratedCodeCB_MovingCamera() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_ACB_MovingCamera_UpdateMovementSpeed_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACB_MovingCamera_UpdateMovementSpeed_Statics::Function_MetaDataParams[] = {
+		{ "Category", "WalkSpeed" },
+		{ "Comment", "// \xc4\xab\xef\xbf\xbd\xde\xb6\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xec\xbd\xba Y\xef\xbf\xbd\xef\xbf\xbd\n" },
+		{ "ModuleRelativePath", "CB_MovingCamera.h" },
+		{ "ToolTip", "\xc4\xab\xef\xbf\xbd\xde\xb6\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xec\xbd\xba Y\xef\xbf\xbd\xef\xbf\xbd" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACB_MovingCamera_UpdateMovementSpeed_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACB_MovingCamera, nullptr, "UpdateMovementSpeed", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ACB_MovingCamera_UpdateMovementSpeed_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ACB_MovingCamera_UpdateMovementSpeed_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ACB_MovingCamera_UpdateMovementSpeed()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACB_MovingCamera_UpdateMovementSpeed_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(ACB_MovingCamera);
 	UClass* Z_Construct_UClass_ACB_MovingCamera_NoRegister()
 	{
@@ -365,11 +449,13 @@ void EmptyLinkFunctionForGeneratedCodeCB_MovingCamera() {}
 	const FClassFunctionLinkInfo Z_Construct_UClass_ACB_MovingCamera_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_ACB_MovingCamera_CameraOrbit, "CameraOrbit" }, // 260384454
 		{ &Z_Construct_UFunction_ACB_MovingCamera_CameraPitch, "CameraPitch" }, // 3948491749
+		{ &Z_Construct_UFunction_ACB_MovingCamera_CameraPitchCal, "CameraPitchCal" }, // 4098491715
 		{ &Z_Construct_UFunction_ACB_MovingCamera_CameraZoom, "CameraZoom" }, // 3552296879
 		{ &Z_Construct_UFunction_ACB_MovingCamera_MouseX, "MouseX" }, // 2715359236
 		{ &Z_Construct_UFunction_ACB_MovingCamera_MouseY, "MouseY" }, // 1391144870
 		{ &Z_Construct_UFunction_ACB_MovingCamera_MoveForward, "MoveForward" }, // 2055172228
 		{ &Z_Construct_UFunction_ACB_MovingCamera_MoveRight, "MoveRight" }, // 3686196745
+		{ &Z_Construct_UFunction_ACB_MovingCamera_UpdateMovementSpeed, "UpdateMovementSpeed" }, // 1372817964
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACB_MovingCamera_Statics::Class_MetaDataParams[] = {
@@ -483,9 +569,9 @@ void EmptyLinkFunctionForGeneratedCodeCB_MovingCamera() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_MovingCamera_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACB_MovingCamera, ACB_MovingCamera::StaticClass, TEXT("ACB_MovingCamera"), &Z_Registration_Info_UClass_ACB_MovingCamera, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACB_MovingCamera), 3363033109U) },
+		{ Z_Construct_UClass_ACB_MovingCamera, ACB_MovingCamera::StaticClass, TEXT("ACB_MovingCamera"), &Z_Registration_Info_UClass_ACB_MovingCamera, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACB_MovingCamera), 2719559321U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_MovingCamera_h_4280820656(TEXT("/Script/framework"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_MovingCamera_h_3496744171(TEXT("/Script/framework"),
 		Z_CompiledInDeferFile_FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_MovingCamera_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_MovingCamera_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

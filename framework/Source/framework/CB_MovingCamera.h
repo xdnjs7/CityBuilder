@@ -71,8 +71,14 @@ public:
 	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, Category = Camera)
 	void MouseY(float Value); // 카메라 마우스 Y축
 
-	//UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, Category = WalkSpeed)
-	//void UpdateMovementSpeed();
+	UFUNCTION(BlueprintCallable, Category = WalkSpeed)
+	void UpdateMovementSpeed();
+
+	UFUNCTION(BlueprintCallable, Category = CameraCalculate)
+	FRotator CameraPitchCal(float Value);
+
+	//UFUNCTION(BlueprintCallable, Category = CameraCalculate)
+	//float CameraZoomCal(float Value);
 
 	//void ZoomIn();
 

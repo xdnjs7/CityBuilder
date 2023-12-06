@@ -19,7 +19,7 @@ void ACB_MovingCamera::BeginPlay()
 {
 	Super::BeginPlay();
 
-	/*CBSpringArm = FindComponentByClass<USpringArmComponent>();*/
+	CBSpringArm = FindComponentByClass<USpringArmComponent>();
 	
 }
 
@@ -114,7 +114,7 @@ void ACB_MovingCamera::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 //	AddControllerYawInput(RotationAmount);
 //}
 
-//void ACB_MovingCamera::CameraZoom(float Value)
+//float ACB_MovingCamera::CameraZoomCal(float Value)
 //{
 //	// 현재 타겟 암 길이 얻기
 //	float CurrentTargetArmLength = CBSpringArm->TargetArmLength;
@@ -128,8 +128,11 @@ void ACB_MovingCamera::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 //	// 부드럽게 타겟 암 길이 변경
 //	float SmoothedTargetArmLength = FMath::FInterpTo(CurrentTargetArmLength, ClampedTargetArmLength, GetWorld()->GetDeltaSeconds(), 5.0f);
 //
-//	// 새로운 타겟 암 길이 설정
+//	// 새로 계산한 타겟 암 길이를 설정
 //	CBSpringArm->TargetArmLength = SmoothedTargetArmLength;
+//
+//	// 최종 타겟 암 길이 반환
+//	return SmoothedTargetArmLength;
 //}
 
 //void ACB_MovingCamera::ZoomIn()
@@ -142,45 +145,52 @@ void ACB_MovingCamera::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 //
 //}
 
-//void ACB_MovingCamera::UpdateMovementSpeed()
-//{
-//    // 현재 SpringArm의 타겟 암 길이를 얻어옴
-//    float TargetArmLength = CBSpringArm->TargetArmLength;
-//
-//    // 타겟 암 길이를 ZoomMin으로 나누어 줌 비율을 계산
-//    float ZoomRatio = TargetArmLength / ZoomMin;
-//
-//    // 나누어진 Zoom 비율을 초기 이동 속도에 곱하여 새로운 이동 속도를 계산
-//    float NewSpeed = ZoomRatio * InitialMovementSpeed;
-//
-//    // 캐릭터 무브먼트의 최대 걷기 속도를 업데이트
-//    ACharacter::GetCharacterMovement()->MaxWalkSpeed = NewSpeed;
-//}
+void ACB_MovingCamera::UpdateMovementSpeed()
+{
+	// CBSpringArm이 null이면 아무 것도 하지 않음
+	if (!CBSpringArm)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("CBSpringArm is null"));
+		return;
+	}
 
-//void ACB_MovingCamera::CameraPitch(float Value)
-//{
-//    // 입력된 값에 OrbitSpeed를 곱하여 카메라의 상하 회전 속도를 조절
-//    float PitchChange = Value * OrbitSpeed;
-//
-//    // 현재 SpringArm의 Pitch에 새로운 상하 회전 값 적용
-//    float NewPitch = PitchChange + CBSpringArm->GetComponentRotation().Pitch;
-//
-//    // 새로운 SpringArm 생성
-//    USpringArmComponent* NewSpringArm = NewObject<USpringArmComponent>(this);
-//
-//    // 현재 Actor의 회전을 가져와서 각도를 분리
-//    FRotator ActorRotation = NewSpringArm->GetOwner()->GetActorRotation();
-//
-//    // 새로운 Pitch 값을 현재 Pitch에 더하여 새로운 회전값 생성
-//    float CombinedPitch = NewPitch + ActorRotation.Pitch;
-//    FRotator NewRotator = UKismetMathLibrary::MakeRotator(ActorRotation.Roll, CombinedPitch, ActorRotation.Yaw);
-//
-//    // 상하 회전 각도를 지정된 범위 내에서 클램핑
-//    float ClampedPitch = FMath::ClampAngle(NewRotator.Pitch, CameraMinClamp, CameraMaxClamp);
-//
-//    // 최종 회전값을 새로운 Pitch 값으로 설정
-//    FRotator FinalRotator = UKismetMathLibrary::MakeRotator(ActorRotation.Roll, ClampedPitch, ActorRotation.Yaw);
-//
-//    // Actor의 회전을 최종 회전값으로 설정하여 상하 회전 적용
-//    NewSpringArm->GetOwner()->SetActorRotation(FinalRotator);
-//}
+    // 현재 SpringArm의 타겟 암 길이를 얻어옴
+    float TargetArmLength = CBSpringArm->TargetArmLength;
+
+	// 타겟 암 길이가 0 이하인 경우도 처리
+	if (TargetArmLength <= 0)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Invalid TargetArmLength"));
+		return;
+	}
+
+    // 타겟 암 길이를 ZoomMin으로 나누어 줌 비율을 계산
+    float ZoomRatio = TargetArmLength / ZoomMin;
+
+    // 나누어진 Zoom 비율을 초기 이동 속도에 곱하여 새로운 이동 속도를 계산
+    float NewSpeed = ZoomRatio * InitialMovementSpeed;
+
+    // 캐릭터 무브먼트의 최대 걷기 속도를 업데이트
+    ACharacter::GetCharacterMovement()->MaxWalkSpeed = NewSpeed;
+}
+
+FRotator ACB_MovingCamera::CameraPitchCal(float Value)
+{
+	// 입력된 값에 OrbitSpeed를 곱하여 카메라의 상하 회전 속도를 조절
+	float PitchChange = Value * OrbitSpeed;
+
+	// 현재 SpringArm의 회전값을 가져옴
+	FRotator SpringArmRotation = CBSpringArm->GetComponentRotation();
+
+	// 새로운 Pitch 값을 계산
+	float NewPitch = SpringArmRotation.Pitch + PitchChange;
+
+	// 상하 회전 각도를 지정된 범위 내에서 클램핑
+	float ClampedPitch = FMath::ClampAngle(NewPitch, CameraMinClamp, CameraMaxClamp);
+
+	// 새로운 회전값을 생성
+	FRotator NewSpringArmRotation = FRotator(ClampedPitch, SpringArmRotation.Yaw, SpringArmRotation.Roll);
+
+	// 새로 계산한 회전값의 Pitch 반환
+	return NewSpringArmRotation;
+}
