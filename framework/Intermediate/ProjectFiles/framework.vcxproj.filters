@@ -43,18 +43,6 @@
     <Filter Include="Source\framework">
       <UniqueIdentifier>{2F6C4CED-AD76-3133-A8BE-A2C0E50F1918}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\framework\CB_Clickable.cpp">
-      <Filter>Source\framework</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\framework\CB_Clickable.h">
-      <Filter>Source\framework</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\framework\CB_PlayerController.cpp">
-      <Filter>Source\framework</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\framework\CB_PlayerController.h">
-      <Filter>Source\framework</Filter>
-    </ClInclude>
     <None Include="..\..\Source\framework\framework.Build.cs">
       <Filter>Source\framework</Filter>
     </None>
@@ -70,17 +58,38 @@
     <ClInclude Include="..\..\Source\framework\frameworkGameModeBase.h">
       <Filter>Source\framework</Filter>
     </ClInclude>
-    <Filter Include="Source\framework\Private">
-      <UniqueIdentifier>{D09F2E28-B504-3965-B121-6A2C69A05D90}</UniqueIdentifier>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source\framework\woong">
+      <UniqueIdentifier>{1ddf8f98-96ad-41c9-afb4-32e403f34071}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\framework\Private\GridManager.cpp">
-      <Filter>Source\framework\Private</Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\framework\CB_Clickable.cpp">
+      <Filter>Source\framework\woong</Filter>
     </ClCompile>
-    <Filter Include="Source\framework\Public">
-      <UniqueIdentifier>{F447B03B-67A9-376F-BBF0-5C81A1B83181}</UniqueIdentifier>
-    </Filter>
-    <ClInclude Include="..\..\Source\framework\Public\GridManager.h">
-      <Filter>Source\framework\Public</Filter>
+    <ClCompile Include="..\..\Source\framework\CB_GameModeBaseCD.cpp">
+      <Filter>Source\framework\woong</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\framework\CB_MovingCamera.cpp">
+      <Filter>Source\framework\woong</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\framework\CB_PlayerControllerCD.cpp">
+      <Filter>Source\framework\woong</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\framework\CB_Clickable.h">
+      <Filter>Source\framework\woong</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\framework\CB_GameModeBaseCD.h">
+      <Filter>Source\framework\woong</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\framework\CB_MovingCamera.h">
+      <Filter>Source\framework\woong</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\framework\CB_PlayerControllerCD.h">
+      <Filter>Source\framework\woong</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

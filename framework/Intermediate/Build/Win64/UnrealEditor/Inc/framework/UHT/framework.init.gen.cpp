@@ -17,22 +17,13 @@ void EmptyLinkFunctionForGeneratedCodeframework_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-<<<<<<< HEAD
-				0xEDE4261D,
-				0x7847CBAC,
-=======
-				0xDE8E3F67,
-				0x35DE7147,
->>>>>>> feature/camera
+				0x46331B32,
+				0x07AC9A04,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_framework.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_framework.OuterSingleton;
 	}
-<<<<<<< HEAD
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_framework(Z_Construct_UPackage__Script_framework, TEXT("/Script/framework"), Z_Registration_Info_UPackage__Script_framework, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xEDE4261D, 0x7847CBAC));
-=======
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_framework(Z_Construct_UPackage__Script_framework, TEXT("/Script/framework"), Z_Registration_Info_UPackage__Script_framework, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xDE8E3F67, 0x35DE7147));
->>>>>>> feature/camera
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_framework(Z_Construct_UPackage__Script_framework, TEXT("/Script/framework"), Z_Registration_Info_UPackage__Script_framework, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x46331B32, 0x07AC9A04));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
