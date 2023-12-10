@@ -14,11 +14,11 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define FRAMEWORK_CB_Clickable_generated_h
 
-#define FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_Clickable_h_12_SPARSE_DATA
-#define FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_Clickable_h_12_RPC_WRAPPERS
-#define FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_Clickable_h_12_RPC_WRAPPERS_NO_PURE_DECLS
-#define FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_Clickable_h_12_ACCESSORS
-#define FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_Clickable_h_12_INCLASS_NO_PURE_DECLS \
+#define FID_framework_Source_framework_CB_Clickable_h_12_SPARSE_DATA
+#define FID_framework_Source_framework_CB_Clickable_h_12_RPC_WRAPPERS
+#define FID_framework_Source_framework_CB_Clickable_h_12_RPC_WRAPPERS_NO_PURE_DECLS
+#define FID_framework_Source_framework_CB_Clickable_h_12_ACCESSORS
+#define FID_framework_Source_framework_CB_Clickable_h_12_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACB_Clickable(); \
 	friend struct Z_Construct_UClass_ACB_Clickable_Statics; \
@@ -27,7 +27,7 @@ public: \
 	DECLARE_SERIALIZER(ACB_Clickable)
 
 
-#define FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_Clickable_h_12_INCLASS \
+#define FID_framework_Source_framework_CB_Clickable_h_12_INCLASS \
 private: \
 	static void StaticRegisterNativesACB_Clickable(); \
 	friend struct Z_Construct_UClass_ACB_Clickable_Statics; \
@@ -36,7 +36,7 @@ public: \
 	DECLARE_SERIALIZER(ACB_Clickable)
 
 
-#define FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_Clickable_h_12_STANDARD_CONSTRUCTORS \
+#define FID_framework_Source_framework_CB_Clickable_h_12_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ACB_Clickable(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ACB_Clickable) \
@@ -50,7 +50,7 @@ public: \
 	NO_API virtual ~ACB_Clickable();
 
 
-#define FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_Clickable_h_12_ENHANCED_CONSTRUCTORS \
+#define FID_framework_Source_framework_CB_Clickable_h_12_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ACB_Clickable(ACB_Clickable&&); \
@@ -62,27 +62,27 @@ public: \
 	NO_API virtual ~ACB_Clickable();
 
 
-#define FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_Clickable_h_9_PROLOG
-#define FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_Clickable_h_12_GENERATED_BODY_LEGACY \
+#define FID_framework_Source_framework_CB_Clickable_h_9_PROLOG
+#define FID_framework_Source_framework_CB_Clickable_h_12_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_Clickable_h_12_SPARSE_DATA \
-	FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_Clickable_h_12_RPC_WRAPPERS \
-	FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_Clickable_h_12_ACCESSORS \
-	FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_Clickable_h_12_INCLASS \
-	FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_Clickable_h_12_STANDARD_CONSTRUCTORS \
+	FID_framework_Source_framework_CB_Clickable_h_12_SPARSE_DATA \
+	FID_framework_Source_framework_CB_Clickable_h_12_RPC_WRAPPERS \
+	FID_framework_Source_framework_CB_Clickable_h_12_ACCESSORS \
+	FID_framework_Source_framework_CB_Clickable_h_12_INCLASS \
+	FID_framework_Source_framework_CB_Clickable_h_12_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_Clickable_h_12_GENERATED_BODY \
+#define FID_framework_Source_framework_CB_Clickable_h_12_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_Clickable_h_12_SPARSE_DATA \
-	FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_Clickable_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_Clickable_h_12_ACCESSORS \
-	FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_Clickable_h_12_INCLASS_NO_PURE_DECLS \
-	FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_Clickable_h_12_ENHANCED_CONSTRUCTORS \
+	FID_framework_Source_framework_CB_Clickable_h_12_SPARSE_DATA \
+	FID_framework_Source_framework_CB_Clickable_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_framework_Source_framework_CB_Clickable_h_12_ACCESSORS \
+	FID_framework_Source_framework_CB_Clickable_h_12_INCLASS_NO_PURE_DECLS \
+	FID_framework_Source_framework_CB_Clickable_h_12_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -90,7 +90,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> FRAMEWORK_API UClass* StaticClass<class ACB_Clickable>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_Clickable_h
+#define CURRENT_FILE_ID FID_framework_Source_framework_CB_Clickable_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

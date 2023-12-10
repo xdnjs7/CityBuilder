@@ -73,15 +73,15 @@ void EmptyLinkFunctionForGeneratedCodeCB_Clickable() {}
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ACB_Clickable);
 	ACB_Clickable::~ACB_Clickable() {}
-	struct Z_CompiledInDeferFile_FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_Clickable_h_Statics
+	struct Z_CompiledInDeferFile_FID_framework_Source_framework_CB_Clickable_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_Clickable_h_Statics::ClassInfo[] = {
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_framework_Source_framework_CB_Clickable_h_Statics::ClassInfo[] = {
 		{ Z_Construct_UClass_ACB_Clickable, ACB_Clickable::StaticClass, TEXT("ACB_Clickable"), &Z_Registration_Info_UClass_ACB_Clickable, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACB_Clickable), 1788185197U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_Clickable_h_4082062349(TEXT("/Script/framework"),
-		Z_CompiledInDeferFile_FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_Clickable_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_Clickable_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_framework_Source_framework_CB_Clickable_h_4082062349(TEXT("/Script/framework"),
+		Z_CompiledInDeferFile_FID_framework_Source_framework_CB_Clickable_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_framework_Source_framework_CB_Clickable_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

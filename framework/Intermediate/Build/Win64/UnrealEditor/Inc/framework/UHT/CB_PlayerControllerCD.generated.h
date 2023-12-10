@@ -14,11 +14,25 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define FRAMEWORK_CB_PlayerControllerCD_generated_h
 
-#define FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_PlayerControllerCD_h_15_SPARSE_DATA
-#define FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_PlayerControllerCD_h_15_RPC_WRAPPERS
-#define FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_PlayerControllerCD_h_15_RPC_WRAPPERS_NO_PURE_DECLS
-#define FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_PlayerControllerCD_h_15_ACCESSORS
-#define FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_PlayerControllerCD_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_framework_Source_framework_CB_PlayerControllerCD_h_16_SPARSE_DATA
+#define FID_framework_Source_framework_CB_PlayerControllerCD_h_16_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execOnLeftMouseClick); \
+	DECLARE_FUNCTION(execUpdateActorPositionToMousePosition); \
+	DECLARE_FUNCTION(execSetupInputComponent); \
+	DECLARE_FUNCTION(execSpawnActorAtMousePosition);
+
+
+#define FID_framework_Source_framework_CB_PlayerControllerCD_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execOnLeftMouseClick); \
+	DECLARE_FUNCTION(execUpdateActorPositionToMousePosition); \
+	DECLARE_FUNCTION(execSetupInputComponent); \
+	DECLARE_FUNCTION(execSpawnActorAtMousePosition);
+
+
+#define FID_framework_Source_framework_CB_PlayerControllerCD_h_16_ACCESSORS
+#define FID_framework_Source_framework_CB_PlayerControllerCD_h_16_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACB_PlayerControllerCD(); \
 	friend struct Z_Construct_UClass_ACB_PlayerControllerCD_Statics; \
@@ -27,7 +41,7 @@ public: \
 	DECLARE_SERIALIZER(ACB_PlayerControllerCD)
 
 
-#define FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_PlayerControllerCD_h_15_INCLASS \
+#define FID_framework_Source_framework_CB_PlayerControllerCD_h_16_INCLASS \
 private: \
 	static void StaticRegisterNativesACB_PlayerControllerCD(); \
 	friend struct Z_Construct_UClass_ACB_PlayerControllerCD_Statics; \
@@ -36,7 +50,7 @@ public: \
 	DECLARE_SERIALIZER(ACB_PlayerControllerCD)
 
 
-#define FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_PlayerControllerCD_h_15_STANDARD_CONSTRUCTORS \
+#define FID_framework_Source_framework_CB_PlayerControllerCD_h_16_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ACB_PlayerControllerCD(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ACB_PlayerControllerCD) \
@@ -50,7 +64,7 @@ public: \
 	NO_API virtual ~ACB_PlayerControllerCD();
 
 
-#define FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_PlayerControllerCD_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_framework_Source_framework_CB_PlayerControllerCD_h_16_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ACB_PlayerControllerCD(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -64,27 +78,27 @@ public: \
 	NO_API virtual ~ACB_PlayerControllerCD();
 
 
-#define FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_PlayerControllerCD_h_12_PROLOG
-#define FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_PlayerControllerCD_h_15_GENERATED_BODY_LEGACY \
+#define FID_framework_Source_framework_CB_PlayerControllerCD_h_13_PROLOG
+#define FID_framework_Source_framework_CB_PlayerControllerCD_h_16_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_PlayerControllerCD_h_15_SPARSE_DATA \
-	FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_PlayerControllerCD_h_15_RPC_WRAPPERS \
-	FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_PlayerControllerCD_h_15_ACCESSORS \
-	FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_PlayerControllerCD_h_15_INCLASS \
-	FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_PlayerControllerCD_h_15_STANDARD_CONSTRUCTORS \
+	FID_framework_Source_framework_CB_PlayerControllerCD_h_16_SPARSE_DATA \
+	FID_framework_Source_framework_CB_PlayerControllerCD_h_16_RPC_WRAPPERS \
+	FID_framework_Source_framework_CB_PlayerControllerCD_h_16_ACCESSORS \
+	FID_framework_Source_framework_CB_PlayerControllerCD_h_16_INCLASS \
+	FID_framework_Source_framework_CB_PlayerControllerCD_h_16_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_PlayerControllerCD_h_15_GENERATED_BODY \
+#define FID_framework_Source_framework_CB_PlayerControllerCD_h_16_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_PlayerControllerCD_h_15_SPARSE_DATA \
-	FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_PlayerControllerCD_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_PlayerControllerCD_h_15_ACCESSORS \
-	FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_PlayerControllerCD_h_15_INCLASS_NO_PURE_DECLS \
-	FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_PlayerControllerCD_h_15_ENHANCED_CONSTRUCTORS \
+	FID_framework_Source_framework_CB_PlayerControllerCD_h_16_SPARSE_DATA \
+	FID_framework_Source_framework_CB_PlayerControllerCD_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_framework_Source_framework_CB_PlayerControllerCD_h_16_ACCESSORS \
+	FID_framework_Source_framework_CB_PlayerControllerCD_h_16_INCLASS_NO_PURE_DECLS \
+	FID_framework_Source_framework_CB_PlayerControllerCD_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -92,7 +106,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> FRAMEWORK_API UClass* StaticClass<class ACB_PlayerControllerCD>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_PlayerControllerCD_h
+#define CURRENT_FILE_ID FID_framework_Source_framework_CB_PlayerControllerCD_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -564,15 +564,15 @@ void EmptyLinkFunctionForGeneratedCodeCB_MovingCamera() {}
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ACB_MovingCamera);
 	ACB_MovingCamera::~ACB_MovingCamera() {}
-	struct Z_CompiledInDeferFile_FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_MovingCamera_h_Statics
+	struct Z_CompiledInDeferFile_FID_framework_Source_framework_CB_MovingCamera_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_MovingCamera_h_Statics::ClassInfo[] = {
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_framework_Source_framework_CB_MovingCamera_h_Statics::ClassInfo[] = {
 		{ Z_Construct_UClass_ACB_MovingCamera, ACB_MovingCamera::StaticClass, TEXT("ACB_MovingCamera"), &Z_Registration_Info_UClass_ACB_MovingCamera, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACB_MovingCamera), 2719559321U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_MovingCamera_h_3496744171(TEXT("/Script/framework"),
-		Z_CompiledInDeferFile_FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_MovingCamera_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_woong_Desktop_CityBuilder_framework_Source_framework_CB_MovingCamera_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_framework_Source_framework_CB_MovingCamera_h_3496744171(TEXT("/Script/framework"),
+		Z_CompiledInDeferFile_FID_framework_Source_framework_CB_MovingCamera_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_framework_Source_framework_CB_MovingCamera_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

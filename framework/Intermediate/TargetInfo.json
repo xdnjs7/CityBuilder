@@ -2,12 +2,12 @@
 	"Targets": [
 		{
 			"Name": "framework",
-			"Path": "C:\\Users\\woong\\Desktop\\CityBuilder\\framework\\Source\\framework.Target.cs",
+			"Path": "E:\\github\\CityBuilder\\framework\\Source\\framework.Target.cs",
 			"Type": "Game"
 		},
 		{
 			"Name": "frameworkEditor",
-			"Path": "C:\\Users\\woong\\Desktop\\CityBuilder\\framework\\Source\\frameworkEditor.Target.cs",
+			"Path": "E:\\github\\CityBuilder\\framework\\Source\\frameworkEditor.Target.cs",
 			"Type": "Editor"
 		}
 	]

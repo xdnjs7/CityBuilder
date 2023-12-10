@@ -1,13 +1,17 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\users\\woong\\desktop\\citybuilder\\framework\\source\\framework\\cb_playercontrollercd.cpp",
+        "Source": "e:\\github\\citybuilder\\framework\\source\\framework\\cb_playercontrollercd.cpp",
         "ProvidedModule": "",
-        "PCH": "c:\\users\\woong\\desktop\\citybuilder\\framework\\intermediate\\build\\win64\\x64\\frameworkeditor\\development\\engine\\sharedpch.engine.shadowerrors.inclorderunreal5_1.h.pch",
+        "PCH": "e:\\github\\citybuilder\\framework\\intermediate\\build\\win64\\x64\\frameworkeditor\\development\\engine\\sharedpch.engine.shadowerrors.inclorderunreal5_1.h.pch",
         "Includes": [
-            "c:\\users\\woong\\desktop\\citybuilder\\framework\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\framework\\definitions.framework.h",
-            "c:\\users\\woong\\desktop\\citybuilder\\framework\\source\\framework\\cb_playercontrollercd.h",
-            "c:\\users\\woong\\desktop\\citybuilder\\framework\\intermediate\\build\\win64\\unrealeditor\\inc\\framework\\uht\\cb_playercontrollercd.generated.h"
+            "e:\\github\\citybuilder\\framework\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\framework\\definitions.framework.h",
+            "e:\\github\\citybuilder\\framework\\source\\framework\\cb_playercontrollercd.h",
+            "e:\\github\\citybuilder\\framework\\source\\framework\\public\\buildingactor.h",
+            "e:\\github\\citybuilder\\framework\\source\\framework\\public\\ploppablecomponent.h",
+            "e:\\github\\citybuilder\\framework\\intermediate\\build\\win64\\unrealeditor\\inc\\framework\\uht\\ploppablecomponent.generated.h",
+            "e:\\github\\citybuilder\\framework\\intermediate\\build\\win64\\unrealeditor\\inc\\framework\\uht\\buildingactor.generated.h",
+            "e:\\github\\citybuilder\\framework\\intermediate\\build\\win64\\unrealeditor\\inc\\framework\\uht\\cb_playercontrollercd.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

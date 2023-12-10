@@ -48,9 +48,9 @@ void EmptyLinkFunctionForGeneratedCodeGridManager() {}
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AGridManager_createCell_Statics::Function_MetaDataParams[] = {
-		{ "Comment", "//int& Size, int& WorldSize); //\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\n" },
+		{ "Comment", "//\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\n" },
 		{ "ModuleRelativePath", "Public/GridManager.h" },
-		{ "ToolTip", "int& Size, int& WorldSize); \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd" },
+		{ "ToolTip", "\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd" },
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AGridManager_createCell_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AGridManager, nullptr, "createCell", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AGridManager_createCell_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AGridManager_createCell_Statics::Function_MetaDataParams)) };
@@ -72,9 +72,7 @@ void EmptyLinkFunctionForGeneratedCodeGridManager() {}
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AGridManager_setWorldoffset_Statics::Function_MetaDataParams[] = {
-		{ "Comment", "//UFUNCTION(BlueprintCallable)\n//void initGrid();//TMap<int,int>& Map, int& Size); //\xef\xbf\xbd\xd7\xb8\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xca\xb1\xef\xbf\xbd\xc8\xad\n" },
 		{ "ModuleRelativePath", "Public/GridManager.h" },
-		{ "ToolTip", "UFUNCTION(BlueprintCallable)\nvoid initGrid();TMap<int,int>& Map, int& Size); \xef\xbf\xbd\xd7\xb8\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xca\xb1\xef\xbf\xbd\xc8\xad" },
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AGridManager_setWorldoffset_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AGridManager, nullptr, "setWorldoffset", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AGridManager_setWorldoffset_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AGridManager_setWorldoffset_Statics::Function_MetaDataParams)) };
@@ -125,8 +123,8 @@ void EmptyLinkFunctionForGeneratedCodeGridManager() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_framework,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AGridManager_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_AGridManager_createCell, "createCell" }, // 1868355689
-		{ &Z_Construct_UFunction_AGridManager_setWorldoffset, "setWorldoffset" }, // 185618421
+		{ &Z_Construct_UFunction_AGridManager_createCell, "createCell" }, // 591719258
+		{ &Z_Construct_UFunction_AGridManager_setWorldoffset, "setWorldoffset" }, // 550644006
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGridManager_Statics::Class_MetaDataParams[] = {
@@ -211,9 +209,9 @@ void EmptyLinkFunctionForGeneratedCodeGridManager() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_framework_Source_framework_Public_GridManager_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AGridManager, AGridManager::StaticClass, TEXT("AGridManager"), &Z_Registration_Info_UClass_AGridManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGridManager), 3678069464U) },
+		{ Z_Construct_UClass_AGridManager, AGridManager::StaticClass, TEXT("AGridManager"), &Z_Registration_Info_UClass_AGridManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGridManager), 3063784853U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_framework_Source_framework_Public_GridManager_h_1325130160(TEXT("/Script/framework"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_framework_Source_framework_Public_GridManager_h_2807492027(TEXT("/Script/framework"),
 		Z_CompiledInDeferFile_FID_framework_Source_framework_Public_GridManager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_framework_Source_framework_Public_GridManager_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
