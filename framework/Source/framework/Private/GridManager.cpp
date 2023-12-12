@@ -39,7 +39,7 @@ void AGridManager::Tick(float DeltaTime)
 
 void AGridManager::setWorldoffset()
 {
-	worldOffset = ((gridSize * worldGridSize) * 0.5) - (worldOffset * 0.5);
+	worldOffset = ((gridSize * worldGridSize) * 0.5) - (worldGridSize * 0.5);
 }
 
 
@@ -59,4 +59,26 @@ void AGridManager::createCell()
 			gridMap.Add(NewCell);
 		}
 	}
+}
+
+FVector AGridManager::GetClosestGridPosition(FVector inPosition)
+{
+	FVector ClosestPosition;
+	float ClosestDistance;
+
+	ClosestPosition = gridMap[0]->GetActorLocation();
+
+	ClosestDistance = FVector::Distance(inPosition, ClosestPosition);
+
+	for (AActor* gridCell : gridMap)
+	{
+		FVector CellLocation = gridCell->GetActorLocation();
+		float dist = FVector::Distance(CellLocation, inPosition);
+		if (dist < ClosestDistance)
+		{
+			ClosestPosition = CellLocation;
+			ClosestDistance = dist;
+		}
+	}
+	return ClosestPosition;
 }

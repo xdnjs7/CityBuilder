@@ -57,7 +57,9 @@ void ACB_PlayerControllerCD::UpdateActorPositionToMousePosition()
 
             if (GetWorld()->LineTraceSingleByChannel(HitResult, Start, End, ECollisionChannel::ECC_GameTraceChannel1))
             {
-                placeableActor->SetActorLocation(HitResult.Location);
+                FVector SelectLocation;
+                SelectLocation = gridManager->GetClosestGridPosition(HitResult.Location);
+                placeableActor->SetActorLocation(SelectLocation);
             }
         }
     }

@@ -17,12 +17,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define FID_framework_Source_framework_Public_GridManager_h_14_SPARSE_DATA
 #define FID_framework_Source_framework_Public_GridManager_h_14_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execGetClosestGridPosition); \
 	DECLARE_FUNCTION(execcreateCell); \
 	DECLARE_FUNCTION(execsetWorldoffset);
 
 
 #define FID_framework_Source_framework_Public_GridManager_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execGetClosestGridPosition); \
 	DECLARE_FUNCTION(execcreateCell); \
 	DECLARE_FUNCTION(execsetWorldoffset);
 

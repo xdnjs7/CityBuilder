@@ -14,6 +14,7 @@ void EmptyLinkFunctionForGeneratedCodeCB_PlayerControllerCD() {}
 	FRAMEWORK_API UClass* Z_Construct_UClass_ABuildingActor_NoRegister();
 	FRAMEWORK_API UClass* Z_Construct_UClass_ACB_PlayerControllerCD();
 	FRAMEWORK_API UClass* Z_Construct_UClass_ACB_PlayerControllerCD_NoRegister();
+	FRAMEWORK_API UClass* Z_Construct_UClass_AGridManager_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_framework();
 // End Cross Module References
 	DEFINE_FUNCTION(ACB_PlayerControllerCD::execOnLeftMouseClick)
@@ -166,6 +167,10 @@ void EmptyLinkFunctionForGeneratedCodeCB_PlayerControllerCD() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_buildingType_MetaData[];
 #endif
 		static const UECodeGen_Private::FClassPropertyParams NewProp_buildingType;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_gridManager_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_gridManager;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -206,9 +211,17 @@ void EmptyLinkFunctionForGeneratedCodeCB_PlayerControllerCD() {}
 	};
 #endif
 	const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ACB_PlayerControllerCD_Statics::NewProp_buildingType = { "buildingType", nullptr, (EPropertyFlags)0x0014000000000005, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(ACB_PlayerControllerCD, buildingType), Z_Construct_UClass_UClass, Z_Construct_UClass_ABuildingActor_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ACB_PlayerControllerCD_Statics::NewProp_buildingType_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACB_PlayerControllerCD_Statics::NewProp_buildingType_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACB_PlayerControllerCD_Statics::NewProp_gridManager_MetaData[] = {
+		{ "Category", "CB_PlayerControllerCD" },
+		{ "ModuleRelativePath", "CB_PlayerControllerCD.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACB_PlayerControllerCD_Statics::NewProp_gridManager = { "gridManager", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(ACB_PlayerControllerCD, gridManager), Z_Construct_UClass_AGridManager_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ACB_PlayerControllerCD_Statics::NewProp_gridManager_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACB_PlayerControllerCD_Statics::NewProp_gridManager_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACB_PlayerControllerCD_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACB_PlayerControllerCD_Statics::NewProp_RightButtonPressed,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACB_PlayerControllerCD_Statics::NewProp_buildingType,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACB_PlayerControllerCD_Statics::NewProp_gridManager,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ACB_PlayerControllerCD_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ACB_PlayerControllerCD>::IsAbstract,
@@ -248,9 +261,9 @@ void EmptyLinkFunctionForGeneratedCodeCB_PlayerControllerCD() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_framework_Source_framework_CB_PlayerControllerCD_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACB_PlayerControllerCD, ACB_PlayerControllerCD::StaticClass, TEXT("ACB_PlayerControllerCD"), &Z_Registration_Info_UClass_ACB_PlayerControllerCD, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACB_PlayerControllerCD), 277966070U) },
+		{ Z_Construct_UClass_ACB_PlayerControllerCD, ACB_PlayerControllerCD::StaticClass, TEXT("ACB_PlayerControllerCD"), &Z_Registration_Info_UClass_ACB_PlayerControllerCD, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACB_PlayerControllerCD), 2011772637U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_framework_Source_framework_CB_PlayerControllerCD_h_1248795830(TEXT("/Script/framework"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_framework_Source_framework_CB_PlayerControllerCD_h_3849466563(TEXT("/Script/framework"),
 		Z_CompiledInDeferFile_FID_framework_Source_framework_CB_PlayerControllerCD_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_framework_Source_framework_CB_PlayerControllerCD_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

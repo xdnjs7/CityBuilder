@@ -1,9 +1,8 @@
-E:\github\CityBuilder\framework\Source\framework\Public\GridManager.h
 E:\github\CityBuilder\framework\Source\framework\Public\BuildingActor.h
-E:\github\CityBuilder\framework\Source\framework\Public\Sample.h
+E:\github\CityBuilder\framework\Source\framework\Public\GridManager.h
 E:\github\CityBuilder\framework\Source\framework\Public\PloppableComponent.h
-E:\github\CityBuilder\framework\Source\framework\CB_GameModeBaseCD.h
-E:\github\CityBuilder\framework\Source\framework\CB_PlayerControllerCD.h
-E:\github\CityBuilder\framework\Source\framework\frameworkGameModeBase.h
 E:\github\CityBuilder\framework\Source\framework\CB_Clickable.h
 E:\github\CityBuilder\framework\Source\framework\CB_MovingCamera.h
+E:\github\CityBuilder\framework\Source\framework\CB_GameModeBaseCD.h
+E:\github\CityBuilder\framework\Source\framework\frameworkGameModeBase.h
+E:\github\CityBuilder\framework\Source\framework\CB_PlayerControllerCD.h

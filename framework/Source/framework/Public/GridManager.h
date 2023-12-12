@@ -47,9 +47,8 @@ public:
 	void setWorldoffset();//월드 오프셋 설정
 	UFUNCTION(BlueprintCallable)
 	void createCell();//셀 생성
-
-
-
+	UFUNCTION(BlueprintCallable)
+	FVector GetClosestGridPosition(FVector inPosition);
 
 
 

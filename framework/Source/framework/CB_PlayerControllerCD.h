@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "BuildingActor.h"
+#include "GridManager.h"
 #include "GameFramework/PlayerController.h"
 #include "CB_PlayerControllerCD.generated.h"
 
@@ -30,6 +31,8 @@ public:
 	TSubclassOf<ABuildingActor> buildingType;
 
 	AActor* placeableActor;
+	UPROPERTY(EditAnyWhere, BlueprintReadWrite)
+	AGridManager* gridManager;
 
 public:
 	/*UFUNCTION(BlueprintCallable)
