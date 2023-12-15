@@ -24,7 +24,7 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-	//º¯¼ö
+	//ï¿½ï¿½ï¿½ï¿½
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool isPlacement;
@@ -38,7 +38,7 @@ public:
 	UPROPERTY()
 	UStaticMeshComponent* StaticMeshComponent;
 
-	//ÇÔ¼ö
+	//ï¿½Ô¼ï¿½
 public:
 	//void OnComponentBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp);
 

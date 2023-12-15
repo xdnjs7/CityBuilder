@@ -2,6 +2,7 @@
 
 
 #include "BuildingActor.h"
+#include "PloppableComponent.h"
 
 // Sets default values
 ABuildingActor::ABuildingActor()

@@ -35,7 +35,7 @@ public:
 	class UStaticMeshComponent* StaticMeshComponent;
 
 	//UPROPERTY(EditAnywhere)
-	//class UCB_ClickableComponent* ClickableComponent;
+	//UCB_ClickableComponent* ClickableComponent;
 
 	UPROPERTY(VisibleAnywhere)
 	class UPloppableComponent* PloppableComponent;

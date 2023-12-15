@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "GridCell.h"
 #include "Math/TransformNonVectorized.h"
 #include "GridManager.generated.h"
 
@@ -17,19 +18,19 @@ public:
 	// Sets default values for this actor's properties
 	AGridManager();
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int gridSize; //그리드 열,행 수
+	int gridSize; 
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int worldGridSize; //그리드 범위
+	int worldGridSize; 
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	TArray<AActor*> gridMap;
+	TArray<AGridCell*> gridMap;
 
-	bool IsBuild; //건설 여부 확인
+	bool IsBuild;
 	float worldOffset;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	TSubclassOf<class AActor> Cell; //셀 액터
+	TSubclassOf<class AActor> Cell;
 
 
 
@@ -44,12 +45,14 @@ public:
 public:
 	
 	UFUNCTION(BlueprintCallable)
-	void setWorldoffset();//월드 오프셋 설정
+	void setWorldoffset();
 	UFUNCTION(BlueprintCallable)
-	void createCell();//셀 생성
+	void createCell();
 	UFUNCTION(BlueprintCallable)
 	FVector GetClosestGridPosition(FVector inPosition);
-
-
+	UFUNCTION(BlueprintCallable)
+	void UpdateGridCellNeighbours();
+	UFUNCTION(BlueprintCallable)
+	AGridCell* GetClosestGridCell(FVector inCellPosition);
 
 };

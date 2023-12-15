@@ -63,10 +63,10 @@ void EmptyLinkFunctionForGeneratedCodeBuildingActor() {}
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABuildingActor_Statics::NewProp_PloppableComponent_MetaData[] = {
 		{ "Category", "BuildingActor" },
-		{ "Comment", "//UPROPERTY(EditAnywhere)\n//class UCB_ClickableComponent* ClickableComponent;\n" },
+		{ "Comment", "//UPROPERTY(EditAnywhere)\n//UCB_ClickableComponent* ClickableComponent;\n" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/BuildingActor.h" },
-		{ "ToolTip", "UPROPERTY(EditAnywhere)\nclass UCB_ClickableComponent* ClickableComponent;" },
+		{ "ToolTip", "UPROPERTY(EditAnywhere)\nUCB_ClickableComponent* ClickableComponent;" },
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABuildingActor_Statics::NewProp_PloppableComponent = { "PloppableComponent", nullptr, (EPropertyFlags)0x00100000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(ABuildingActor, PloppableComponent), Z_Construct_UClass_UPloppableComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABuildingActor_Statics::NewProp_PloppableComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABuildingActor_Statics::NewProp_PloppableComponent_MetaData)) };
@@ -111,9 +111,9 @@ void EmptyLinkFunctionForGeneratedCodeBuildingActor() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_framework_Source_framework_Public_BuildingActor_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ABuildingActor, ABuildingActor::StaticClass, TEXT("ABuildingActor"), &Z_Registration_Info_UClass_ABuildingActor, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABuildingActor), 3332358838U) },
+		{ Z_Construct_UClass_ABuildingActor, ABuildingActor::StaticClass, TEXT("ABuildingActor"), &Z_Registration_Info_UClass_ABuildingActor, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABuildingActor), 1061521842U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_framework_Source_framework_Public_BuildingActor_h_4014487085(TEXT("/Script/framework"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_framework_Source_framework_Public_BuildingActor_h_177931527(TEXT("/Script/framework"),
 		Z_CompiledInDeferFile_FID_framework_Source_framework_Public_BuildingActor_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_framework_Source_framework_Public_BuildingActor_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

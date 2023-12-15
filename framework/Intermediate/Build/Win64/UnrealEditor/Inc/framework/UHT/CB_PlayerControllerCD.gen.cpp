@@ -109,9 +109,7 @@ void EmptyLinkFunctionForGeneratedCodeCB_PlayerControllerCD() {}
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACB_PlayerControllerCD_SpawnActorAtMousePosition_Statics::Function_MetaDataParams[] = {
-		{ "Comment", "/*UFUNCTION(BlueprintCallable)\n\x09void InPlacementMode(bool isEnabled);\n\x09UFUNCTION(BlueprintCallable)\n\x09void UpdatePlacement();\n\x09UFUNCTION(BlueprintCallable)\n\x09void SpawnBuilding();*/" },
 		{ "ModuleRelativePath", "CB_PlayerControllerCD.h" },
-		{ "ToolTip", "UFUNCTION(BlueprintCallable)\n       void InPlacementMode(bool isEnabled);\n       UFUNCTION(BlueprintCallable)\n       void UpdatePlacement();\n       UFUNCTION(BlueprintCallable)\n       void SpawnBuilding();" },
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACB_PlayerControllerCD_SpawnActorAtMousePosition_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACB_PlayerControllerCD, nullptr, "SpawnActorAtMousePosition", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ACB_PlayerControllerCD_SpawnActorAtMousePosition_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ACB_PlayerControllerCD_SpawnActorAtMousePosition_Statics::Function_MetaDataParams)) };
@@ -182,7 +180,7 @@ void EmptyLinkFunctionForGeneratedCodeCB_PlayerControllerCD() {}
 	const FClassFunctionLinkInfo Z_Construct_UClass_ACB_PlayerControllerCD_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_ACB_PlayerControllerCD_OnLeftMouseClick, "OnLeftMouseClick" }, // 2047412369
 		{ &Z_Construct_UFunction_ACB_PlayerControllerCD_SetupInputComponent, "SetupInputComponent" }, // 4189271154
-		{ &Z_Construct_UFunction_ACB_PlayerControllerCD_SpawnActorAtMousePosition, "SpawnActorAtMousePosition" }, // 3002487969
+		{ &Z_Construct_UFunction_ACB_PlayerControllerCD_SpawnActorAtMousePosition, "SpawnActorAtMousePosition" }, // 2343443447
 		{ &Z_Construct_UFunction_ACB_PlayerControllerCD_UpdateActorPositionToMousePosition, "UpdateActorPositionToMousePosition" }, // 2355229832
 	};
 #if WITH_METADATA
@@ -261,9 +259,9 @@ void EmptyLinkFunctionForGeneratedCodeCB_PlayerControllerCD() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_framework_Source_framework_CB_PlayerControllerCD_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACB_PlayerControllerCD, ACB_PlayerControllerCD::StaticClass, TEXT("ACB_PlayerControllerCD"), &Z_Registration_Info_UClass_ACB_PlayerControllerCD, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACB_PlayerControllerCD), 2011772637U) },
+		{ Z_Construct_UClass_ACB_PlayerControllerCD, ACB_PlayerControllerCD::StaticClass, TEXT("ACB_PlayerControllerCD"), &Z_Registration_Info_UClass_ACB_PlayerControllerCD, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACB_PlayerControllerCD), 2855701812U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_framework_Source_framework_CB_PlayerControllerCD_h_3849466563(TEXT("/Script/framework"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_framework_Source_framework_CB_PlayerControllerCD_h_825157716(TEXT("/Script/framework"),
 		Z_CompiledInDeferFile_FID_framework_Source_framework_CB_PlayerControllerCD_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_framework_Source_framework_CB_PlayerControllerCD_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

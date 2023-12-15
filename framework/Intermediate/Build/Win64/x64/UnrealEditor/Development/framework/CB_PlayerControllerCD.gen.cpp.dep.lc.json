@@ -12,6 +12,12 @@
             "e:\\github\\citybuilder\\framework\\intermediate\\build\\win64\\unrealeditor\\inc\\framework\\uht\\ploppablecomponent.generated.h",
             "e:\\github\\citybuilder\\framework\\intermediate\\build\\win64\\unrealeditor\\inc\\framework\\uht\\buildingactor.generated.h",
             "e:\\github\\citybuilder\\framework\\source\\framework\\public\\gridmanager.h",
+            "e:\\github\\citybuilder\\framework\\source\\framework\\public\\gridcell.h",
+            "e:\\github\\citybuilder\\framework\\source\\framework\\public\\buildingtypeenum.h",
+            "c:\\program files\\epic games\\ue_5.2\\engine\\source\\runtime\\engine\\classes\\engine\\userdefinedenum.h",
+            "c:\\program files\\epic games\\ue_5.2\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\userdefinedenum.generated.h",
+            "e:\\github\\citybuilder\\framework\\intermediate\\build\\win64\\unrealeditor\\inc\\framework\\uht\\buildingtypeenum.generated.h",
+            "e:\\github\\citybuilder\\framework\\intermediate\\build\\win64\\unrealeditor\\inc\\framework\\uht\\gridcell.generated.h",
             "e:\\github\\citybuilder\\framework\\intermediate\\build\\win64\\unrealeditor\\inc\\framework\\uht\\gridmanager.generated.h",
             "e:\\github\\citybuilder\\framework\\intermediate\\build\\win64\\unrealeditor\\inc\\framework\\uht\\cb_playercontrollercd.generated.h"
         ],

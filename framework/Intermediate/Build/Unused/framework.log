@@ -2,5 +2,23 @@
   Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" frameworkEditor Win64 Development -Project="E:\github\CityBuilder\framework\framework.uproject" -WaitMutex -FromMsBuild
   Log file: C:\Users\xdnjs\AppData\Local\UnrealBuildTool\Log.txt
   Using 'git status' to determine working set for adaptive non-unity build (E:\github\CityBuilder).
-  Unable to build while Live Coding is active. Exit the editor and game, or press Ctrl+Alt+F11 if iterating on code in the editor or game
-C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.MakeFile.Targets(44,5): error MSB3073: ""C:\Program Files\Epic Games\UE_5.2\Engine\Build\BatchFiles\Build.bat" frameworkEditor Win64 Development -Project="E:\github\CityBuilder\framework\framework.uproject" -WaitMutex -FromMsBuild" 명령이 종료되었습니다(코드: 6).
+  Building frameworkEditor...
+  Using Visual Studio 2022 14.37.32825 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822) and Windows 10.0.22621.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+  [Upgrade]
+  [Upgrade] Using backward-compatible include order. The latest version of UE has changed the order of includes, which may require code changes. The current setting is:
+  [Upgrade]     IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_1
+  [Upgrade] Suppress this message by setting 'IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_2;' in frameworkEditor.Target.cs.
+  [Upgrade] Alternatively you can set this to 'EngineIncludeOrderVersion.Latest' to always use the latest include order. This will potentially cause compile errors when integrating new versions of the engine.
+  [Upgrade]
+  [Adaptive Build] Excluded from framework unity file: CB_PlayerControllerCD.cpp, BuildingActor.cpp, BuildingTypeEnum.cpp, GridCell.cpp, GridManager.cpp, PloppableComponent.cpp
+  Determining max actions to execute in parallel (6 physical cores, 12 logical cores)
+    Executing up to 6 processes, one per physical core
+  Building 4 actions with 4 processes...
+  [1/4] Compile [x64] GridManager.cpp
+  [2/4] Link [x64] UnrealEditor-framework.lib
+     E:\github\CityBuilder\framework\Intermediate\Build\Win64\x64\UnrealEditor\Development\framework\UnrealEditor-framework.lib 라이브러리 및 E:\github\CityBuilder\framework\Intermediate\Build\Win64\x64\UnrealEditor\Development\framework\UnrealEditor-framework.exp 개체를 생성하고 있습니다.
+  [3/4] Link [x64] UnrealEditor-framework.dll
+     E:\github\CityBuilder\framework\Intermediate\Build\Win64\x64\UnrealEditor\Development\framework\UnrealEditor-framework.suppressed.lib 라이브러리 및 E:\github\CityBuilder\framework\Intermediate\Build\Win64\x64\UnrealEditor\Development\framework\UnrealEditor-framework.suppressed.exp 개체를 생성하고 있습니다.
+  [4/4] WriteMetadata frameworkEditor.target
+  Total time in Parallel executor: 1.43 seconds
+  Total execution time: 2.00 seconds

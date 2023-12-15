@@ -20,7 +20,7 @@ public:
 	bool RightButtonPressed = false;
 
 
-//¿øºó Ãß°¡ ÄÚµå
+//ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ ï¿½Úµï¿½
 
 	virtual void BeginPlay() override;
 
@@ -29,18 +29,12 @@ public:
 	bool placementModeEnabled;
 	UPROPERTY(EditAnyWhere, BlueprintReadWrite)
 	TSubclassOf<ABuildingActor> buildingType;
-
-	AActor* placeableActor;
+	FVector SelectLocation;
+	ABuildingActor* placeableActor;
 	UPROPERTY(EditAnyWhere, BlueprintReadWrite)
 	AGridManager* gridManager;
-
+	EBuildingTypeEnum OccupyingType;
 public:
-	/*UFUNCTION(BlueprintCallable)
-	void InPlacementMode(bool isEnabled);
-	UFUNCTION(BlueprintCallable)
-	void UpdatePlacement();
-	UFUNCTION(BlueprintCallable)
-	void SpawnBuilding();*/
 
 	UFUNCTION(BlueprintCallable)
 	void SpawnActorAtMousePosition();

@@ -2,12 +2,13 @@
 
 
 #include "CB_PlayerControllerCD.h"
+#include "BuildingTypeEnum.h"
+#include "GridCell.h"
 
 void ACB_PlayerControllerCD::BeginPlay()
 {
     Super::BeginPlay();
 
-    
     SpawnActorAtMousePosition();
 }
 
@@ -22,20 +23,20 @@ void ACB_PlayerControllerCD::SetupInputComponent()
 {
     Super::SetupInputComponent();
 
-    // ¸¶¿ì½º Å¬¸¯ ÀÌº¥Æ®¿¡ ´ëÇÑ ¹ÙÀÎµù Ãß°¡
+    // ï¿½ï¿½ï¿½ì½º Å¬ï¿½ï¿½ ï¿½Ìºï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Îµï¿½ ï¿½ß°ï¿½
     InputComponent->BindAction("LeftMouseClick", IE_Pressed, this, &ACB_PlayerControllerCD::OnLeftMouseClick);
 }
 
 void ACB_PlayerControllerCD::SpawnActorAtMousePosition()
 {
-    // ¿øÇÏ´Â ¾×ÅÍ Å¬·¡½º¿¡ ´ëÇÑ UClass*¸¦ ¾òÀ½
-    UClass* ActorClass = buildingType; // ÀÚ½ÅÀÇ ¾×ÅÍ Å¬·¡½º·Î º¯°æ
+    // ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ UClass*ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+    UClass* ActorClass = buildingType; // ï¿½Ú½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
     FActorSpawnParameters SpawnParams;
     SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
 
-    // ¾×ÅÍ¸¦ ½ºÆùÇÏ°í, placeableActor·Î ÀúÀå
-    placeableActor = GetWorld()->SpawnActor<AActor>(ActorClass, FVector::ZeroVector, FRotator::ZeroRotator, SpawnParams);
+
+    placeableActor = GetWorld()->SpawnActor<ABuildingActor>(ActorClass, FVector::ZeroVector, FRotator::ZeroRotator, SpawnParams);
 }
 
 
@@ -57,7 +58,6 @@ void ACB_PlayerControllerCD::UpdateActorPositionToMousePosition()
 
             if (GetWorld()->LineTraceSingleByChannel(HitResult, Start, End, ECollisionChannel::ECC_GameTraceChannel1))
             {
-                FVector SelectLocation;
                 SelectLocation = gridManager->GetClosestGridPosition(HitResult.Location);
                 placeableActor->SetActorLocation(SelectLocation);
             }
@@ -71,8 +71,15 @@ void ACB_PlayerControllerCD::OnLeftMouseClick()
     if (PloppableComponent)
     {
         bool isPlacement = PloppableComponent->isPlacement;
-        if (isPlacement==true)
+        bool isOccupied = gridManager->GetClosestGridCell(SelectLocation)->IsOccupied;
+        if (isPlacement==true&&isOccupied==false)
         {
+            OccupyingType = EBuildingTypeEnum::Placed;
+            gridManager->GetClosestGridCell(SelectLocation)->NorthCell->SetOccupied(OccupyingType, placeableActor);
+            gridManager->GetClosestGridCell(SelectLocation)->SouthCell->SetOccupied(OccupyingType, placeableActor);
+            gridManager->GetClosestGridCell(SelectLocation)->EastCell->SetOccupied(OccupyingType, placeableActor);
+            gridManager->GetClosestGridCell(SelectLocation)->WestCell->SetOccupied(OccupyingType, placeableActor);
+
             placeableActor = nullptr;
 
             SpawnActorAtMousePosition();
@@ -80,6 +87,8 @@ void ACB_PlayerControllerCD::OnLeftMouseClick()
     }
 
 }
+
+
 
 
 

@@ -46,7 +46,7 @@ void AGridManager::setWorldoffset()
 
 void AGridManager::createCell()
 {
-	AActor* NewCell;
+	AGridCell* NewCell;
 	FVector ACell;
 	for (int i = 0; i < gridSize; i++)
 	{
@@ -55,7 +55,7 @@ void AGridManager::createCell()
 			ACell.X = (i * worldGridSize) - worldOffset;
 			ACell.Y = (j * worldGridSize) - worldOffset;
 			ACell.Z = 0;
-			NewCell=GetWorld()->SpawnActor<AActor>(Cell, ACell, FRotator::ZeroRotator);
+			NewCell=GetWorld()->SpawnActor<AGridCell>(Cell, ACell, FRotator::ZeroRotator);
 			gridMap.Add(NewCell);
 		}
 	}
@@ -81,4 +81,52 @@ FVector AGridManager::GetClosestGridPosition(FVector inPosition)
 		}
 	}
 	return ClosestPosition;
+}
+
+
+void AGridManager::UpdateGridCellNeighbours()
+{
+	for (int i = 0; i < gridMap.Num(); i++)
+	{
+		if (i - gridSize >= 0)
+		{
+			gridMap[i]->SouthCell = gridMap[i - gridSize];
+		}
+		if (i + gridSize < gridMap.Num())
+		{
+			gridMap[i]->NorthCell = gridMap[i + gridSize];
+		}
+		if (i != 0 && i % gridSize != 1)
+		{
+			gridMap[i]->WestCell = gridMap[i - 1];
+		}
+		if (i != gridMap.Num() - 1 && (i + 1) % gridSize != 0)
+		{
+			gridMap[i]->EastCell = gridMap[i + 1];
+		}
+
+	}
+}
+
+
+AGridCell* AGridManager::GetClosestGridCell(FVector inCellPosition)
+{
+	FVector ClosestPosition;
+	float ClosestDistance;
+	AGridCell* gcell = nullptr;
+	int index = 0;
+	ClosestDistance = FVector::Distance(inCellPosition, ClosestPosition);
+
+	for (AGridCell* gridCell : gridMap)
+	{
+		FVector CellLocation = gridCell->GetActorLocation();
+		float dist = FVector::Distance(CellLocation, inCellPosition);
+		if (dist < ClosestDistance)
+		{
+			ClosestDistance = dist;
+			gcell = gridCell;
+		}
+		index++;
+	}
+	return gcell;
 }

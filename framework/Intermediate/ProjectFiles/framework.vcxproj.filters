@@ -85,10 +85,13 @@
     <Filter Include="Source\framework\Private">
       <UniqueIdentifier>{D09F2E28-B504-3965-B121-6A2C69A05D90}</UniqueIdentifier>
     </Filter>
-    <None Include="..\..\Source\framework\Private\alsof51r.ud5~">
-      <Filter>Source\framework\Private</Filter>
-    </None>
     <ClCompile Include="..\..\Source\framework\Private\BuildingActor.cpp">
+      <Filter>Source\framework\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\framework\Private\BuildingTypeEnum.cpp">
+      <Filter>Source\framework\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\framework\Private\GridCell.cpp">
       <Filter>Source\framework\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\framework\Private\GridManager.cpp">
@@ -97,22 +100,22 @@
     <ClCompile Include="..\..\Source\framework\Private\PloppableComponent.cpp">
       <Filter>Source\framework\Private</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\framework\Private\Sample.cpp">
-      <Filter>Source\framework\Private</Filter>
-    </ClCompile>
     <Filter Include="Source\framework\Public">
       <UniqueIdentifier>{F447B03B-67A9-376F-BBF0-5C81A1B83181}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\framework\Public\BuildingActor.h">
       <Filter>Source\framework\Public</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\framework\Public\BuildingTypeEnum.h">
+      <Filter>Source\framework\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\framework\Public\GridCell.h">
+      <Filter>Source\framework\Public</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\framework\Public\GridManager.h">
       <Filter>Source\framework\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\framework\Public\PloppableComponent.h">
-      <Filter>Source\framework\Public</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\framework\Public\Sample.h">
       <Filter>Source\framework\Public</Filter>
     </ClInclude>
   </ItemGroup>
